@@ -1,0 +1,251 @@
+﻿iso,iso3,iso_numeric,name,capital,population,currency_code,currency_name,neighbours
+AD,AND,20,Andorra,Andorra la Vella,84000,EUR,Euro,"ES,FR"
+AE,ARE,784,United Arab Emirates,Abu Dhabi,4975593,AED,Dirham,"SA,OM"
+AF,AFG,4,Afghanistan,Kabul,29121286,AFN,Afghani,"TM,CN,IR,TJ,PK,UZ"
+AG,ATG,28,Antigua and Barbuda,St. John's,86754,XCD,Dollar,
+AI,AIA,660,Anguilla,The Valley,13254,XCD,Dollar,
+AL,ALB,8,Albania,Tirana,2986952,ALL,Lek,"MK,GR,ME,RS,XK"
+AM,ARM,51,Armenia,Yerevan,2968000,AMD,Dram,"GE,IR,AZ,TR"
+AO,AGO,24,Angola,Luanda,13068161,AOA,Kwanza,"CD,NA,ZM,CG"
+AQ,ATA,10,Antarctica,,0,,,
+AR,ARG,32,Argentina,Buenos Aires,41343201,ARS,Peso,"CL,BO,UY,PY,BR"
+AS,ASM,16,American Samoa,Pago Pago,57881,USD,Dollar,
+AT,AUT,40,Austria,Vienna,8205000,EUR,Euro,"CH,DE,HU,SK,CZ,IT,SI,LI"
+AU,AUS,36,Australia,Canberra,21515754,AUD,Dollar,
+AW,ABW,533,Aruba,Oranjestad,71566,AWG,Guilder,
+AX,ALA,248,Aland Islands,Mariehamn,26711,EUR,Euro,
+AZ,AZE,31,Azerbaijan,Baku,8303512,AZN,Manat,"GE,IR,AM,TR,RU"
+BA,BIH,70,Bosnia and Herzegovina,Sarajevo,4590000,BAM,Marka,"HR,ME,RS"
+BB,BRB,52,Barbados,Bridgetown,285653,BBD,Dollar,
+BD,BGD,50,Bangladesh,Dhaka,156118464,BDT,Taka,"MM,IN"
+BE,BEL,56,Belgium,Brussels,10403000,EUR,Euro,"DE,NL,LU,FR"
+BF,BFA,854,Burkina Faso,Ouagadougou,16241811,XOF,Franc,"NE,BJ,GH,CI,TG,ML"
+BG,BGR,100,Bulgaria,Sofia,7148785,BGN,Lev,"MK,GR,RO,TR,RS"
+BH,BHR,48,Bahrain,Manama,738004,BHD,Dinar,
+BI,BDI,108,Burundi,Bujumbura,9863117,BIF,Franc,"TZ,CD,RW"
+BJ,BEN,204,Benin,Porto-Novo,9056010,XOF,Franc,"NE,TG,BF,NG"
+BL,BLM,652,Saint Barthelemy,Gustavia,8450,EUR,Euro,
+BM,BMU,60,Bermuda,Hamilton,65365,BMD,Dollar,
+BN,BRN,96,Brunei,Bandar Seri Begawan,395027,BND,Dollar,MY
+BO,BOL,68,Bolivia,Sucre,9947418,BOB,Boliviano,"PE,CL,PY,BR,AR"
+BQ,BES,535,"Bonaire, Saint Eustatius and Saba ",,18012,USD,Dollar,
+BR,BRA,76,Brazil,Brasilia,201103330,BRL,Real,"SR,PE,BO,UY,GY,PY,GF,VE,CO,AR"
+BS,BHS,44,Bahamas,Nassau,301790,BSD,Dollar,
+BT,BTN,64,Bhutan,Thimphu,699847,BTN,Ngultrum,"CN,IN"
+BV,BVT,74,Bouvet Island,,0,NOK,Krone,
+BW,BWA,72,Botswana,Gaborone,2029307,BWP,Pula,"ZW,ZA,NA"
+BY,BLR,112,Belarus,Minsk,9685000,BYR,Ruble,"PL,LT,UA,RU,LV"
+BZ,BLZ,84,Belize,Belmopan,314522,BZD,Dollar,"GT,MX"
+CA,CAN,124,Canada,Ottawa,33679000,CAD,Dollar,US
+CC,CCK,166,Cocos Islands,West Island,628,AUD,Dollar,
+CD,COD,180,Democratic Republic of the Congo,Kinshasa,70916439,CDF,Franc,"TZ,CF,SS,RW,ZM,BI,UG,CG,AO"
+CF,CAF,140,Central African Republic,Bangui,4844927,XAF,Franc,"TD,SD,CD,SS,CM,CG"
+CG,COG,178,Republic of the Congo,Brazzaville,3039126,XAF,Franc,"CF,GA,CD,CM,AO"
+CH,CHE,756,Switzerland,Bern,7581000,CHF,Franc,"DE,IT,LI,FR,AT"
+CI,CIV,384,Ivory Coast,Yamoussoukro,21058798,XOF,Franc,"LR,GH,GN,BF,ML"
+CK,COK,184,Cook Islands,Avarua,21388,NZD,Dollar,
+CL,CHL,152,Chile,Santiago,16746491,CLP,Peso,"PE,BO,AR"
+CM,CMR,120,Cameroon,Yaounde,19294149,XAF,Franc,"TD,CF,GA,GQ,CG,NG"
+CN,CHN,156,China,Beijing,1330044000,CNY,Yuan Renminbi,"LA,BT,TJ,KZ,MN,AF,NP,MM,KG,PK,KP,RU,VN,IN"
+CO,COL,170,Colombia,Bogota,47790000,COP,Peso,"EC,PE,PA,BR,VE"
+CR,CRI,188,Costa Rica,San Jose,4516220,CRC,Colon,"PA,NI"
+CU,CUB,192,Cuba,Havana,11423000,CUP,Peso,US
+CV,CPV,132,Cape Verde,Praia,508659,CVE,Escudo,
+CW,CUW,531,Curacao, Willemstad,141766,ANG,Guilder,
+CX,CXR,162,Christmas Island,Flying Fish Cove,1500,AUD,Dollar,
+CY,CYP,196,Cyprus,Nicosia,1102677,EUR,Euro,
+CZ,CZE,203,Czechia,Prague,10476000,CZK,Koruna,"PL,DE,SK,AT"
+DE,DEU,276,Germany,Berlin,81802257,EUR,Euro,"CH,PL,NL,DK,BE,CZ,LU,FR,AT"
+DJ,DJI,262,Djibouti,Djibouti,740528,DJF,Franc,"ER,ET,SO"
+DK,DNK,208,Denmark,Copenhagen,5484000,DKK,Krone,DE
+DM,DMA,212,Dominica,Roseau,72813,XCD,Dollar,
+DO,DOM,214,Dominican Republic,Santo Domingo,9823821,DOP,Peso,HT
+DZ,DZA,12,Algeria,Algiers,34586184,DZD,Dinar,"NE,EH,LY,MR,TN,MA,ML"
+EC,ECU,218,Ecuador,Quito,14790608,USD,Dollar,"PE,CO"
+EE,EST,233,Estonia,Tallinn,1291170,EUR,Euro,"RU,LV"
+EG,EGY,818,Egypt,Cairo,80471869,EGP,Pound,"LY,SD,IL,PS"
+EH,ESH,732,Western Sahara,El-Aaiun,273008,MAD,Dirham,"DZ,MR,MA"
+ER,ERI,232,Eritrea,Asmara,5792984,ERN,Nakfa,"ET,SD,DJ"
+ES,ESP,724,Spain,Madrid,46505963,EUR,Euro,"AD,PT,GI,FR,MA"
+ET,ETH,231,Ethiopia,Addis Ababa,88013491,ETB,Birr,"ER,KE,SD,SS,SO,DJ"
+FI,FIN,246,Finland,Helsinki,5244000,EUR,Euro,"NO,RU,SE"
+FJ,FJI,242,Fiji,Suva,875983,FJD,Dollar,
+FK,FLK,238,Falkland Islands,Stanley,2638,FKP,Pound,
+FM,FSM,583,Micronesia,Palikir,107708,USD,Dollar,
+FO,FRO,234,Faroe Islands,Torshavn,48228,DKK,Krone,
+FR,FRA,250,France,Paris,64768389,EUR,Euro,"CH,DE,BE,LU,IT,AD,MC,ES"
+GA,GAB,266,Gabon,Libreville,1545255,XAF,Franc,"CM,GQ,CG"
+GB,GBR,826,United Kingdom,London,62348447,GBP,Pound,IE
+GD,GRD,308,Grenada,St. George's,107818,XCD,Dollar,
+GE,GEO,268,Georgia,Tbilisi,4630000,GEL,Lari,"AM,AZ,TR,RU"
+GF,GUF,254,French Guiana,Cayenne,195506,EUR,Euro,"SR,BR"
+GG,GGY,831,Guernsey,St Peter Port,65228,GBP,Pound,
+GH,GHA,288,Ghana,Accra,24339838,GHS,Cedi,"CI,TG,BF"
+GI,GIB,292,Gibraltar,Gibraltar,27884,GIP,Pound,ES
+GL,GRL,304,Greenland,Nuuk,56375,DKK,Krone,
+GM,GMB,270,Gambia,Banjul,1593256,GMD,Dalasi,SN
+GN,GIN,324,Guinea,Conakry,10324025,GNF,Franc,"LR,SN,SL,CI,GW,ML"
+GP,GLP,312,Guadeloupe,Basse-Terre,443000,EUR,Euro,
+GQ,GNQ,226,Equatorial Guinea,Malabo,1014999,XAF,Franc,"GA,CM"
+GR,GRC,300,Greece,Athens,11000000,EUR,Euro,"AL,MK,TR,BG"
+GS,SGS,239,South Georgia and the South Sandwich Islands,Grytviken,30,GBP,Pound,
+GT,GTM,320,Guatemala,Guatemala City,13550440,GTQ,Quetzal,"MX,HN,BZ,SV"
+GU,GUM,316,Guam,Hagatna,159358,USD,Dollar,
+GW,GNB,624,Guinea-Bissau,Bissau,1565126,XOF,Franc,"SN,GN"
+GY,GUY,328,Guyana,Georgetown,748486,GYD,Dollar,"SR,BR,VE"
+HK,HKG,344,Hong Kong,Hong Kong,6898686,HKD,Dollar,
+HM,HMD,334,Heard Island and McDonald Islands,,0,AUD,Dollar,
+HN,HND,340,Honduras,Tegucigalpa,7989415,HNL,Lempira,"GT,NI,SV"
+HR,HRV,191,Croatia,Zagreb,4284889,HRK,Kuna,"HU,SI,BA,ME,RS"
+HT,HTI,332,Haiti,Port-au-Prince,9648924,HTG,Gourde,DO
+HU,HUN,348,Hungary,Budapest,9982000,HUF,Forint,"SK,SI,RO,UA,HR,AT,RS"
+ID,IDN,360,Indonesia,Jakarta,242968342,IDR,Rupiah,"PG,TL,MY"
+IE,IRL,372,Ireland,Dublin,4622917,EUR,Euro,GB
+IL,ISR,376,Israel,Jerusalem,7353985,ILS,Shekel,"SY,JO,LB,EG,PS"
+IM,IMN,833,Isle of Man,Douglas,75049,GBP,Pound,
+IN,IND,356,India,New Delhi,1173108018,INR,Rupee,"CN,NP,MM,BT,PK,BD"
+IO,IOT,86,British Indian Ocean Territory,Diego Garcia,4000,USD,Dollar,
+IQ,IRQ,368,Iraq,Baghdad,29671605,IQD,Dinar,"SY,SA,IR,JO,TR,KW"
+IR,IRN,364,Iran,Tehran,76923300,IRR,Rial,"TM,AF,IQ,AM,PK,AZ,TR"
+IS,ISL,352,Iceland,Reykjavik,308910,ISK,Krona,
+IT,ITA,380,Italy,Rome,60340328,EUR,Euro,"CH,VA,SI,SM,FR,AT"
+JE,JEY,832,Jersey,Saint Helier,90812,GBP,Pound,
+JM,JAM,388,Jamaica,Kingston,2847232,JMD,Dollar,
+JO,JOR,400,Jordan,Amman,6407085,JOD,Dinar,"SY,SA,IQ,IL,PS"
+JP,JPN,392,Japan,Tokyo,127288000,JPY,Yen,
+KE,KEN,404,Kenya,Nairobi,40046566,KES,Shilling,"ET,TZ,SS,SO,UG"
+KG,KGZ,417,Kyrgyzstan,Bishkek,5776500,KGS,Som,"CN,TJ,UZ,KZ"
+KH,KHM,116,Cambodia,Phnom Penh,14453680,KHR,Riels,"LA,TH,VN"
+KI,KIR,296,Kiribati,Tarawa,92533,AUD,Dollar,
+KM,COM,174,Comoros,Moroni,773407,KMF,Franc,
+KN,KNA,659,Saint Kitts and Nevis,Basseterre,51134,XCD,Dollar,
+KP,PRK,408,North Korea,Pyongyang,22912177,KPW,Won,"CN,KR,RU"
+KR,KOR,410,South Korea,Seoul,48422644,KRW,Won,KP
+XK,XKX,0,Kosovo,Pristina,1800000,EUR,Euro,"RS,AL,MK,ME"
+KW,KWT,414,Kuwait,Kuwait City,2789132,KWD,Dinar,"SA,IQ"
+KY,CYM,136,Cayman Islands,George Town,44270,KYD,Dollar,
+KZ,KAZ,398,Kazakhstan,Astana,15340000,KZT,Tenge,"TM,CN,KG,UZ,RU"
+LA,LAO,418,Laos,Vientiane,6368162,LAK,Kip,"CN,MM,KH,TH,VN"
+LB,LBN,422,Lebanon,Beirut,4125247,LBP,Pound,"SY,IL"
+LC,LCA,662,Saint Lucia,Castries,160922,XCD,Dollar,
+LI,LIE,438,Liechtenstein,Vaduz,35000,CHF,Franc,"CH,AT"
+LK,LKA,144,Sri Lanka,Colombo,21513990,LKR,Rupee,
+LR,LBR,430,Liberia,Monrovia,3685076,LRD,Dollar,"SL,CI,GN"
+LS,LSO,426,Lesotho,Maseru,1919552,LSL,Loti,ZA
+LT,LTU,440,Lithuania,Vilnius,2944459,EUR,Euro,"PL,BY,RU,LV"
+LU,LUX,442,Luxembourg,Luxembourg,497538,EUR,Euro,"DE,BE,FR"
+LV,LVA,428,Latvia,Riga,2217969,EUR,Euro,"LT,EE,BY,RU"
+LY,LBY,434,Libya,Tripoli,6461454,LYD,Dinar,"TD,NE,DZ,SD,TN,EG"
+MA,MAR,504,Morocco,Rabat,33848242,MAD,Dirham,"DZ,EH,ES"
+MC,MCO,492,Monaco,Monaco,32965,EUR,Euro,FR
+MD,MDA,498,Moldova,Chisinau,4324000,MDL,Leu,"RO,UA"
+ME,MNE,499,Montenegro,Podgorica,666730,EUR,Euro,"AL,HR,BA,RS,XK"
+MF,MAF,663,Saint Martin,Marigot,35925,EUR,Euro,SX
+MG,MDG,450,Madagascar,Antananarivo,21281844,MGA,Ariary,
+MH,MHL,584,Marshall Islands,Majuro,65859,USD,Dollar,
+MK,MKD,807,Macedonia,Skopje,2062294,MKD,Denar,"AL,GR,BG,RS,XK"
+ML,MLI,466,Mali,Bamako,13796354,XOF,Franc,"SN,NE,DZ,CI,GN,MR,BF"
+MM,MMR,104,Myanmar,Nay Pyi Taw,53414374,MMK,Kyat,"CN,LA,TH,BD,IN"
+MN,MNG,496,Mongolia,Ulan Bator,3086918,MNT,Tugrik,"CN,RU"
+MO,MAC,446,Macao,Macao,449198,MOP,Pataca,
+MP,MNP,580,Northern Mariana Islands,Saipan,53883,USD,Dollar,
+MQ,MTQ,474,Martinique,Fort-de-France,432900,EUR,Euro,
+MR,MRT,478,Mauritania,Nouakchott,3205060,MRO,Ouguiya,"SN,DZ,EH,ML"
+MS,MSR,500,Montserrat,Plymouth,9341,XCD,Dollar,
+MT,MLT,470,Malta,Valletta,403000,EUR,Euro,
+MU,MUS,480,Mauritius,Port Louis,1294104,MUR,Rupee,
+MV,MDV,462,Maldives,Male,395650,MVR,Rufiyaa,
+MW,MWI,454,Malawi,Lilongwe,15447500,MWK,Kwacha,"TZ,MZ,ZM"
+MX,MEX,484,Mexico,Mexico City,112468855,MXN,Peso,"GT,US,BZ"
+MY,MYS,458,Malaysia,Kuala Lumpur,28274729,MYR,Ringgit,"BN,TH,ID"
+MZ,MOZ,508,Mozambique,Maputo,22061451,MZN,Metical,"ZW,TZ,SZ,ZA,ZM,MW"
+NA,NAM,516,Namibia,Windhoek,2128471,NAD,Dollar,"ZA,BW,ZM,AO"
+NC,NCL,540,New Caledonia,Noumea,216494,XPF,Franc,
+NE,NER,562,Niger,Niamey,15878271,XOF,Franc,"TD,BJ,DZ,LY,BF,NG,ML"
+NF,NFK,574,Norfolk Island,Kingston,1828,AUD,Dollar,
+NG,NGA,566,Nigeria,Abuja,154000000,NGN,Naira,"TD,NE,BJ,CM"
+NI,NIC,558,Nicaragua,Managua,5995928,NIO,Cordoba,"CR,HN"
+NL,NLD,528,Netherlands,Amsterdam,16645000,EUR,Euro,"DE,BE"
+NO,NOR,578,Norway,Oslo,5009150,NOK,Krone,"FI,RU,SE"
+NP,NPL,524,Nepal,Kathmandu,28951852,NPR,Rupee,"CN,IN"
+NR,NRU,520,Nauru,Yaren,10065,AUD,Dollar,
+NU,NIU,570,Niue,Alofi,2166,NZD,Dollar,
+NZ,NZL,554,New Zealand,Wellington,4252277,NZD,Dollar,
+OM,OMN,512,Oman,Muscat,2967717,OMR,Rial,"SA,YE,AE"
+PA,PAN,591,Panama,Panama City,3410676,PAB,Balboa,"CR,CO"
+PE,PER,604,Peru,Lima,29907003,PEN,Sol,"EC,CL,BO,BR,CO"
+PF,PYF,258,French Polynesia,Papeete,270485,XPF,Franc,
+PG,PNG,598,Papua New Guinea,Port Moresby,6064515,PGK,Kina,ID
+PH,PHL,608,Philippines,Manila,99900177,PHP,Peso,
+PK,PAK,586,Pakistan,Islamabad,184404791,PKR,Rupee,"CN,AF,IR,IN"
+PL,POL,616,Poland,Warsaw,38500000,PLN,Zloty,"DE,LT,SK,CZ,BY,UA,RU"
+PM,SPM,666,Saint Pierre and Miquelon,Saint-Pierre,7012,EUR,Euro,
+PN,PCN,612,Pitcairn,Adamstown,46,NZD,Dollar,
+PR,PRI,630,Puerto Rico,San Juan,3916632,USD,Dollar,
+PS,PSE,275,Palestinian Territory,East Jerusalem,3800000,ILS,Shekel,"JO,IL,EG"
+PT,PRT,620,Portugal,Lisbon,10676000,EUR,Euro,ES
+PW,PLW,585,Palau,Melekeok,19907,USD,Dollar,
+PY,PRY,600,Paraguay,Asuncion,6375830,PYG,Guarani,"BO,BR,AR"
+QA,QAT,634,Qatar,Doha,840926,QAR,Rial,SA
+RE,REU,638,Reunion,Saint-Denis,776948,EUR,Euro,
+RO,ROU,642,Romania,Bucharest,21959278,RON,Leu,"MD,HU,UA,BG,RS"
+RS,SRB,688,Serbia,Belgrade,7344847,RSD,Dinar,"AL,HU,MK,RO,HR,BA,BG,ME,XK"
+RU,RUS,643,Russia,Moscow,140702000,RUB,Ruble,"GE,CN,BY,UA,KZ,LV,PL,EE,LT,FI,MN,NO,AZ,KP"
+RW,RWA,646,Rwanda,Kigali,11055976,RWF,Franc,"TZ,CD,BI,UG"
+SA,SAU,682,Saudi Arabia,Riyadh,25731776,SAR,Rial,"QA,OM,IQ,YE,JO,AE,KW"
+SB,SLB,90,Solomon Islands,Honiara,559198,SBD,Dollar,
+SC,SYC,690,Seychelles,Victoria,88340,SCR,Rupee,
+SD,SDN,729,Sudan,Khartoum,35000000,SDG,Pound,"SS,TD,EG,ET,ER,LY,CF"
+SS,SSD,728,South Sudan,Juba,8260490,SSP,Pound,"CD,CF,ET,KE,SD,UG"
+SE,SWE,752,Sweden,Stockholm,9828655,SEK,Krona,"NO,FI"
+SG,SGP,702,Singapore,Singapore,4701069,SGD,Dollar,
+SH,SHN,654,Saint Helena,Jamestown,7460,SHP,Pound,
+SI,SVN,705,Slovenia,Ljubljana,2007000,EUR,Euro,"HU,IT,HR,AT"
+SJ,SJM,744,Svalbard and Jan Mayen,Longyearbyen,2550,NOK,Krone,
+SK,SVK,703,Slovakia,Bratislava,5455000,EUR,Euro,"PL,HU,CZ,UA,AT"
+SL,SLE,694,Sierra Leone,Freetown,5245695,SLL,Leone,"LR,GN"
+SM,SMR,674,San Marino,San Marino,31477,EUR,Euro,IT
+SN,SEN,686,Senegal,Dakar,12323252,XOF,Franc,"GN,MR,GW,GM,ML"
+SO,SOM,706,Somalia,Mogadishu,10112453,SOS,Shilling,"ET,KE,DJ"
+SR,SUR,740,Suriname,Paramaribo,492829,SRD,Dollar,"GY,BR,GF"
+ST,STP,678,Sao Tome and Principe,Sao Tome,175808,STD,Dobra,
+SV,SLV,222,El Salvador,San Salvador,6052064,USD,Dollar,"GT,HN"
+SX,SXM,534,Sint Maarten,Philipsburg,37429,ANG,Guilder,MF
+SY,SYR,760,Syria,Damascus,22198110,SYP,Pound,"IQ,JO,IL,TR,LB"
+SZ,SWZ,748,Swaziland,Mbabane,1354051,SZL,Lilangeni,"ZA,MZ"
+TC,TCA,796,Turks and Caicos Islands,Cockburn Town,20556,USD,Dollar,
+TD,TCD,148,Chad,N'Djamena,10543464,XAF,Franc,"NE,LY,CF,SD,CM,NG"
+TF,ATF,260,French Southern Territories,Port-aux-Francais,140,EUR,Euro  ,
+TG,TGO,768,Togo,Lome,6587239,XOF,Franc,"BJ,GH,BF"
+TH,THA,764,Thailand,Bangkok,67089500,THB,Baht,"LA,MM,KH,MY"
+TJ,TJK,762,Tajikistan,Dushanbe,7487489,TJS,Somoni,"CN,AF,KG,UZ"
+TK,TKL,772,Tokelau,,1466,NZD,Dollar,
+TL,TLS,626,East Timor,Dili,1154625,USD,Dollar,ID
+TM,TKM,795,Turkmenistan,Ashgabat,4940916,TMT,Manat,"AF,IR,UZ,KZ"
+TN,TUN,788,Tunisia,Tunis,10589025,TND,Dinar,"DZ,LY"
+TO,TON,776,Tonga,Nuku'alofa,122580,TOP,Pa'anga,
+TR,TUR,792,Turkey,Ankara,77804122,TRY,Lira,"SY,GE,IQ,IR,GR,AM,AZ,BG"
+TT,TTO,780,Trinidad and Tobago,Port of Spain,1228691,TTD,Dollar,
+TV,TUV,798,Tuvalu,Funafuti,10472,AUD,Dollar,
+TW,TWN,158,Taiwan,Taipei,22894384,TWD,Dollar,
+TZ,TZA,834,Tanzania,Dodoma,41892895,TZS,Shilling,"MZ,KE,CD,RW,ZM,BI,UG,MW"
+UA,UKR,804,Ukraine,Kiev,45415596,UAH,Hryvnia,"PL,MD,HU,SK,BY,RO,RU"
+UG,UGA,800,Uganda,Kampala,33398682,UGX,Shilling,"TZ,KE,SS,CD,RW"
+UM,UMI,581,United States Minor Outlying Islands,,0,USD,Dollar ,
+US,USA,840,United States,Washington,310232863,USD,Dollar,"CA,MX,CU"
+UY,URY,858,Uruguay,Montevideo,3477000,UYU,Peso,"BR,AR"
+UZ,UZB,860,Uzbekistan,Tashkent,27865738,UZS,Som,"TM,AF,KG,TJ,KZ"
+VA,VAT,336,Vatican,Vatican City,921,EUR,Euro,IT
+VC,VCT,670,Saint Vincent and the Grenadines,Kingstown,104217,XCD,Dollar,
+VE,VEN,862,Venezuela,Caracas,27223228,VEF,Bolivar,"GY,BR,CO"
+VG,VGB,92,British Virgin Islands,Road Town,21730,USD,Dollar,
+VI,VIR,850,U.S. Virgin Islands,Charlotte Amalie,108708,USD,Dollar,
+VN,VNM,704,Vietnam,Hanoi,89571130,VND,Dong,"CN,LA,KH"
+VU,VUT,548,Vanuatu,Port Vila,221552,VUV,Vatu,
+WF,WLF,876,Wallis and Futuna,Mata Utu,16025,XPF,Franc,
+WS,WSM,882,Samoa,Apia,192001,WST,Tala,
+YE,YEM,887,Yemen,Sanaa,23495361,YER,Rial,"SA,OM"
+YT,MYT,175,Mayotte,Mamoudzou,159042,EUR,Euro,
+ZA,ZAF,710,South Africa,Pretoria,49000000,ZAR,Rand,"ZW,SZ,MZ,BW,NA,LS"
+ZM,ZMB,894,Zambia,Lusaka,13460305,ZMW,Kwacha,"ZW,TZ,MZ,CD,NA,MW,AO"
+ZW,ZWE,716,Zimbabwe,Harare,13061000,ZWL,Dollar,"ZA,MZ,BW,ZM"

@@ -46,3 +46,14 @@ grant select, insert, update, delete on api.todos to webuser;
 -- anonymous users can only request specific columns from this view
 grant select (id, row_id, todo) on api.todos to anonymous;
 -------------------------------------------------------------------------------
+-- grant apropriate profile permissions
+alter table data.profile enable row level security;
+create policy profile_access_policy on data.profile to api 
+using (
+	-- authenticated users can read all the profiles
+	(request.user_role() = 'webuser')
+)
+with check (
+	-- authenticated users can only update/delete their profiles
+	(request.user_role() = 'webuser' and request.user_id() = owner_id)
+);

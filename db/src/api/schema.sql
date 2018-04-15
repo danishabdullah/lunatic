@@ -9,10 +9,12 @@ create role api;
 grant api to current_user; -- this is a workaround for RDS where the master user does not have SUPERUSER priviliges  
 
 -- redifine this type to control the user properties returned by auth endpoints
-\ir ../libs/auth/api/user_type.sql
+\ir ../libs/auth/api/types/user.sql
 -- include all auth endpoints
 \ir ../libs/auth/api/all.sql
 
 -- our endpoints
-\ir todos.sql
-\ir search_todos.sql
+\ir ./todo/todos.sql
+\ir ./profile/profiles.sql
+\ir ./search/todos.sql
+\ir ./search/profiles.sql
