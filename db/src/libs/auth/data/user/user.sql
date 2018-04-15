@@ -2,11 +2,11 @@
 select settings.set('auth.data-schema', current_schema);
 create table "user" (
 	id                   		bigserial primary key,
-	email                		char(256) not null unique,
-	"password"           		char(1024) not null,
-	facebook_id			    	char(128),
-	facebook_access_token   	char(4096),
-	forgotten_password_secret	char(256),
+	email                		varchar(256) not null unique,
+	"password"           		varchar(1024) not null,
+	facebook_id			    	varchar(128),
+	facebook_access_token   	varchar(4096),
+	forgotten_password_secret	varchar(256),
 	email_blocked				boolean not null default false,
 	known_spammer				boolean not null default false,		
 	has_verified_email			boolean not null default false,

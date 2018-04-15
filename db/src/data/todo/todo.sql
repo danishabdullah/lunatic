@@ -1,8 +1,8 @@
 create table todo (
-	id    serial primary key,
-	todo  text not null,
-	private boolean default true,  
-	owner_id int references "user"(id) default request.user_id()
+	id    			serial primary key,
+	todo  			varchar(256) not null,
+	private 		boolean default true,  
+	owner_id int 	references "user"(id) default request.user_id()
 );
 
 -- attach the trigger to send events to rabbitmq

@@ -14,12 +14,13 @@ set search_path = data, public;
 
 -- ui setup
 \ir ./ui/setup.sql
+\ir ./relay/uisetup_id.sql
 
 -- todo
 \ir ./todo/todo.sql
-\ir ./relay/todo_relay_id.sql
+\ir ./relay/todo_id.sql
 
 -- profile
 \ir ./profile/types/all.sql
 \ir ./profile/profile.sql
-\ir ./relay/profile_relay_id.sql
+\ir ./relay/profile_id.sql
