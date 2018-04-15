@@ -13,7 +13,7 @@ create table "profile" (
 	dob 				 			date not null,
 	display_picture		 			varchar(1024) not null,
 	-- country				 			country not null default 'germany',
-	educational_institution 		educational_institution,
+	educational_stage 				educational_stage,
 	educational_modifier			educational_modifier,
 	is_student			 			boolean,	 
 	diet				 			diet,
@@ -44,6 +44,7 @@ create table "profile" (
 	things_cant_do_without  		varchar(1024),
 	most_private_shareables 		varchar(1024),
 	message_me_if					varchar(1024),
+	orientation						orienatiaon[5] not null default ARRAY['straight']::orientation[],
 	search_intention				looking_for[6] not null,
 	search_age_range_lowest			smallint not null default 18,
 	search_age_range_highest		smallint not null default 120,
@@ -52,15 +53,16 @@ create table "profile" (
 	search_only_non_monogamous		boolean not null default false,
 
 	-- References
-	owner_id 			 			bigint references data."user"(id) default request.user_id()
+	owner_id 			 			bigint references data."user"(id) not null default request.user_id() 
 	-- Checks
 	check (length(name)>2),
 	check (dob BETWEEN '1905-01-01'::date  AND CURRENT_DATE - interval '18 year'),
 	check (75 <= height_in_cm AND height_in_cm <= 250),
 	check (18 <= search_age_range_lowest AND search_age_range_lowest <= 120),
-	check (18 <= search_age_range_highest AND search_age_range_highest <= 120)
+	check (18 <= search_age_range_highest AND search_age_range_highest <= 120),
+	check (ownder_id = request.user_id())
 );
 
 create trigger send_change_event
 after insert or update or delete on profile
-for each row execute procedure rabbitmq.on_row_change('{"include":["id","name"]}');
+for each row execute procedure rabbitmq.on_row_change('{"include":["id","name", "owner_id"]}');

@@ -20,8 +20,10 @@ grant api to current_user; -- this is a workaround for RDS where the master user
 
 -- todos
 \ir todo/todos.sql
-\ir search/todos.sql
-
 -- profiles
 \ir profile/profiles.sql
-\ir search/profiles.sql
+
+-- rpc
+\ir rpc/profiles.sql
+\ir rpc/todos.sql
+

@@ -5,18 +5,18 @@
 -- https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage
 local session_cookie = require 'subzero.jwt_session_cookie'
 session_cookie.configure({
-    -- rest_prefix = '/internal/rest/',
-    -- login_uri = 'rpc/login',
-    -- logout_uri = 'rpc/logout' ,
-    -- refresh_uri = 'rpc/refresh_token',
-    -- session_cookie_name = 'SESSIONID',
-    -- session_refresh_threshold = (60*55) -- (expire - now < session_refresh_threshold),
-    -- path = '/',
-    -- domain = nil,
-    -- secure = false,
-    -- httponly = true,
-    -- samesite = "Strict",
-    -- extension = nil,
+    rest_prefix = '/internal/rest/',
+    login_uri = 'rpc/login',
+    logout_uri = 'rpc/logout' ,
+    refresh_uri = 'rpc/refresh_token',
+    session_cookie_name = 'SESSIONID',
+    session_refresh_threshold = (60*55), -- (expire - now < session_refresh_threshold),
+    path = '/',
+    domain = nil,
+    secure = false,
+    httponly = true,
+    samesite = "Strict",
+    extension = nil,
 })
 
 -- ================ GraphQL schema generation hooks =======================

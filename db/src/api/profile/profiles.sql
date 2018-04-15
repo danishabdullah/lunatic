@@ -18,7 +18,7 @@ select
     show_as_other_gender, 		
     relationship_status,	 		
     languages,			 		
-    dob, 				 		
+    date_trunc('year', age(dob::timestamp))::varchar(10) as age, 				 		
     display_picture,		 		
     -- country,				 	
     educational_institution, 	

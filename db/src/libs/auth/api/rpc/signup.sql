@@ -1,4 +1,4 @@
-create or replace function signup(name text, email text, password text) returns session as $$
+create or replace function signup(email text, password text) returns session as $$
 declare
     usr record;
     result record;
@@ -6,12 +6,12 @@ declare
 begin
     EXECUTE format(
         ' insert into %I."user" as u'
-        ' (name, email, password) values'
-        ' ($1, $2, $3)'
+        ' (email, password) values'
+        ' ($1, $2)'
         ' returning row_to_json(u.*) as j'
 		, quote_ident(settings.get('auth.data-schema')))
    	INTO usr
-   	USING $1, $2, $3;
+   	USING $1, $2;
 
     EXECUTE format(
         ' select json_populate_record(null::%I."user", $1) as r'
@@ -28,4 +28,4 @@ begin
 end
 $$ security definer language plpgsql;
 
-revoke all privileges on function signup(text, text, text) from public;
+revoke all privileges on function signup(text, text) from public;

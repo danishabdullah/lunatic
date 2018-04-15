@@ -1,5 +1,5 @@
-\ir ./types/session.sql
-\ir login.sql
-\ir refresh_token.sql
-\ir signup.sql
-\ir me.sql
+\ir types/session.sql
+\ir rpc/login.sql
+\ir rpc/refresh_token.sql
+\ir rpc/signup.sql
+\ir rpc/me.sql

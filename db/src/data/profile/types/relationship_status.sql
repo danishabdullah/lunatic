@@ -20,6 +20,6 @@ values
 --         "married": "Married",
 --         "open relationship": "Open Relationship",
 --         "non-monogamous": "Non-monogamous",
---         "it's complicated": "It''s Complicated"
+--         "it''s complicated": "It''s Complicated"
 --     }
 -- }

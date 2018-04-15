@@ -15,12 +15,12 @@ values
 
 -- pretty jsonb
 -- {
---     "options": {
---         "activity partner": "Activity Partner",
---         "casual fun": "Casual Fun",
---         "friendship": "Friendship",
---         "long-term dating": "Long-term Dating",
---         "non-monogamous dating": "Non-monogamous Dating",
---         "short-term dating": "Short-term Dating"
---     }
+    -- "options": {
+    --     "activity partner": "Activity Partner",
+    --     "casual fun": "Casual Fun",
+    --     "friendship": "Friendship",
+    --     "long-term dating": "Long-term Dating",
+    --     "non-monogamous dating": "Non-monogamous Dating",
+    --     "short-term dating": "Short-term Dating"
+    -- }
 -- }
