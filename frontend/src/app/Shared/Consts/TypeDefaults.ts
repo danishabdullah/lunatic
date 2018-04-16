@@ -59,7 +59,7 @@ export let DIET: UIOption = {
   }
 };
 
-export let EDUCATIONAL_INSTITUTION: UIOption = {
+export let EDUCATIONAL_STAGE: UIOption = {
   'options': {
     'high school': 'High School',
     'monster university': 'Monster University',
@@ -140,18 +140,18 @@ export let LOOKING_FOR: UIOption = {
 
 export let ORIENTATION: UIOption = {
   'options': {
-      'Straight': 'Straight',
-      'Gay': 'Gay',
-      'Bisexual': 'Bisexual',
-      'Asexual': 'Asexual',
-      'Demisexual': 'Demisexual',
-      'Heteroflexible': 'Heteroflexible',
-      'Homoflexible': 'Homoflexible',
-      'Lesbian': 'Lesbian',
-      'Pansexual': 'Pansexual',
-      'Queer': 'Queer',
-      'Questioning': 'Questioning',
-      'Sapiosexual': 'Sapiosexual'
+      'straight': 'Straight',
+      'gay': 'Gay',
+      'bisexual': 'Bisexual',
+      'asexual': 'Asexual',
+      'demisexual': 'Demisexual',
+      'heteroflexible': 'Heteroflexible',
+      'homoflexible': 'Homoflexible',
+      'lesbian': 'Lesbian',
+      'pansexual': 'Pansexual',
+      'queer': 'Queer',
+      'questioning': 'Questioning',
+      'sapiosexual': 'Sapiosexual'
   }
 };
 
