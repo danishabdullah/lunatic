@@ -1,0 +1,531 @@
+User:
+  enums:
+    - name: user_role
+      options: webuser,admin,shadow-banned
+  domains:
+    - name: email
+      type: varchar(256)
+      check: length(value) > 6 AND value ~* '(?:[a-z0-9!#$%&''*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&''*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])'
+  columns:
+    - name: id
+      type: bigserial
+      primary_key: true
+    - name: email
+      type: email
+      nullable: false
+      modifiers: unique
+    - name: '"password"'
+      type: varchar(72)
+      nullable: false
+      check: length("password") > 12
+    - name: has_verified_email
+      type: boolean
+      nullable: false
+      default: false
+    - name: email_verification_code
+      type: uuid
+    - name: '"role"'
+      type: user_role
+      nullable: false
+      default: settings.get('auth.default-role')::user_role
+    - name: facebook_id
+      type: varchar(128)
+    - name: facebook_access_token
+      type: varchar(4096)
+    - name: forgotten_password_secret
+      type: varchar(256)
+  rls:
+    read: (request.user_role() = 'webuser' and request.user_id() = id)
+    alter: (request.user_role() = 'webuser' and request.user_id() = id)
+  rabbitmq:
+    include: id,email
+  include:
+    created_at: true
+    updated_at: true
+  api:
+    exclude: password,created_at,updated_at,email_verification_code
+
+UISetup:
+  columns:
+    - name: name
+      type: varchar(64)
+      primary_key: true
+    - name: details
+      type: jsonb
+      nullable: false
+  rls:
+    read: all
+    alter: none
+  api:
+    exclude: created_at,updated_at
+
+Conversation:
+  enums:
+    - name: feedback_type
+      options: positive,negative,neutral
+    - name: feedback_theme
+      options: indecent exposure, unfriendly, copy/paste, insulting, too long, did not read, not my type, too eager, not eager enough, not my humour, too incoherent, too silly, had not read my profile, misunderstood my profile, not in my area, other 
+  columns:
+    - name: id
+      type: bigserial
+      primary_key: true
+    - name: success
+      type: boolean
+      default: false
+      nullable: false
+    - name: feedback
+      type: varchar(1024)
+      check: length("feedback") > 100
+    - name: feedback_type
+      type: feedback_type
+    - name: feedback_theme
+      type: feedback_theme[10]
+    - name: feedback_received_at
+      type: timestamp with time zone
+    - name: marked_as_spam
+      type: boolean
+    - name: marked_as_bot
+      type: boolean
+    - name: marked_as_fake
+      type: boolean
+    - name: marked_as_impersonation
+      type: boolean
+  foreign_keys:
+    - name: origin_user_id
+      type: bigint
+      nullable: false
+      references:
+        table: user
+        column: id
+    - name: target_user_id
+      type: bigint
+      nullable: false
+      references:
+        table: user
+        column: id
+  rls:
+    read: (request.user_role() = 'webuser' and (request.user_id() = origin_user_id or request.user_id() = target_user_id))
+    alter: (request.user_role() = 'webuser' and  (request.user_id() = origin_user_id or request.user_id() = target_user_id))
+  api:
+    exclude: created_at,updated_at
+
+Message:
+  columns:
+    - name: id
+      type: bigserial
+      primary_key: true
+    - name: content
+      type: varchar(2048)
+      check: length("content") > 10
+  foreign_keys:
+    - name: conversation_id
+      type: bigserial
+      nullable: false
+      references: 
+        table: conversation
+        column: id
+    - name: '"from"'
+      type: bigint
+      nullable: false
+      references: 
+        table: user
+        column: id
+    - name: '"to"'
+      type: bigint
+      nullable: false
+      references: 
+        table: user
+        column: id
+  rls:
+    read: (request.user_role() = 'webuser' and (request.user_id() = "from" or request.user_id() = "to"))
+    alter: none
+  api:
+    exclude: created_at,updated_at
+
+Match:
+  columns:
+    - name: ids_string #smaller_user_id,larger_user_id
+      type: varchar(39)
+      primary_key: true
+    - name: left_liked
+      type: boolean
+      default: false
+      nullable: false
+    - name: right_liked
+      type: boolean
+      default: false
+      nullable: false
+  foreign_keys:
+    - name: left_user_id
+      type: bigint
+      nullable: false
+      references:
+        table: user
+        column: id
+    - name: right_user_id
+      type: bigint
+      nullable: false
+      references:
+        table: user
+        column: id
+  rls:
+    read: (request.user_role() = 'webuser' and (request.user_id() = left_user_id or request.user_id() = right_user_id))
+    alter: (request.user_role() = 'webuser' and (request.user_id() = left_user_id or request.user_id() = right_user_id))
+  api:
+    exclude: ids_string, created_at, updated_at
+
+Hidden:
+  columns:
+    - name: id
+      type: bigserial
+      primary_key: true
+  foreign_keys:
+    - name: by_user
+      type: bigint
+      nullable: false
+      references:
+        table: user
+        column: id
+    - name: hidden_user
+      type: bigint
+      nullable: false
+      references:
+        table: user
+        column: id
+  rls:
+    read: (request.user_role() = 'webuser' and (request.user_id() = by_user or request.user_id() = hidden_user))
+    alter: (request.user_role() = 'webuser' and (request.user_id() = by_user or request.user_id() = hidden_user))
+  api:
+    exclude: created_at,updated_at
+
+Country:
+  enums:
+    - name: iso
+      options: AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, BF, BG, BH, BI, BJ, BL, BM, BN, BO, BQ, BR, BS, BT, BV, BW, BY, BZ, CA, CC, CD, CF, CG, CH, CI, CK, CL, CM, CN, CO, CR, CU, CV, CW, CX, CY, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, EH, ER, ES, ET, FI, FJ, FK, FM, FO, FR, GA, GB, GD, GE, GF, GG, GH, GI, GL, GM, GN, GP, GQ, GR, GS, GT, GU, GW, GY, HK, HM, HN, HR, HT, HU, ID, IE, IL, IM, IN, IO, IQ, IR, IS, IT, JE, JM, JO, JP, KE, KG, KH, KI, KM, KN, KP, KR, XK, KW, KY, KZ, LA, LB, LC, LI, LK, LR, LS, LT, LU, LV, LY, MA, MC, MD, ME, MF, MG, MH, MK, ML, MM, MN, MO, MP, MQ, MR, MS, MT, MU, MV, MW, MX, MY, MZ, NA, NC, NE, NF, NG, NI, NL, NO, NP, NR, NU, NZ, OM, PA, PE, PF, PG, PH, PK, PL, PM, PN, PR, PS, PT, PW, PY, QA, RE, RO, RS, RU, RW, SA, SB, SC, SD, SS, SE, SG, SH, SI, SJ, SK, SL, SM, SN, SO, SR, ST, SV, SX, SY, SZ, TC, TD, TF, TG, TH, TJ, TK, TL, TM, TN, TO, TR, TT, TV, TW, TZ, UA, UG, UM, US, UY, UZ, VA, VC, VE, VG, VI, VN, VU, WF, WS, YE, YT, ZA, ZM, ZW
+      display_names: "'Andorra', 'United Arab Emirates', 'Afghanistan', 'Antigua and Barbuda', 'Anguilla', 'Albania', 'Armenia', 'Angola', 'Antarctica', 'Argentina', 'American Samoa', 'Austria', 'Australia', 'Aruba', 'Aland Islands', 'Azerbaijan', 'Bosnia and Herzegovina', 'Barbados', 'Bangladesh', 'Belgium', 'Burkina Faso', 'Bulgaria', 'Bahrain', 'Burundi', 'Benin', 'Saint Barthelemy', 'Bermuda', 'Brunei', 'Bolivia', 'Bonaire, Saint Eustatius and Saba', 'Brazil', 'Bahamas', 'Bhutan', 'Bouvet Island', 'Botswana', 'Belarus', 'Belize', 'Canada', 'Cocos Islands', 'Democratic Republic of the Congo', 'Central African Republic', 'Republic of the Congo', 'Switzerland', 'Ivory Coast', 'Cook Islands', 'Chile', 'Cameroon', 'China', 'Colombia', 'Costa Rica', 'Cuba', 'Cape Verde', 'Curacao', 'Christmas Island', 'Cyprus', 'Czechia', 'Germany', 'Djibouti', 'Denmark', 'Dominica', 'Dominican Republic', 'Algeria', 'Ecuador', 'Estonia', 'Egypt', 'Western Sahara', 'Eritrea', 'Spain', 'Ethiopia', 'Finland', 'Fiji', 'Falkland Islands', 'Micronesia', 'Faroe Islands', 'France', 'Gabon', 'United Kingdom', 'Grenada', 'Georgia', 'French Guiana', 'Guernsey', 'Ghana', 'Gibraltar', 'Greenland', 'Gambia', 'Guinea', 'Guadeloupe', 'Equatorial Guinea', 'Greece', 'South Georgia and the South Sandwich Islands', 'Guatemala', 'Guam', 'Guinea-Bissau', 'Guyana', 'Hong Kong', 'Heard Island and McDonald Islands', 'Honduras', 'Croatia', 'Haiti', 'Hungary', 'Indonesia', 'Ireland', 'Israel', 'Isle of Man', 'India', 'British Indian Ocean Territory', 'Iraq', 'Iran', 'Iceland', 'Italy', 'Jersey', 'Jamaica', 'Jordan', 'Japan', 'Kenya', 'Kyrgyzstan', 'Cambodia', 'Kiribati', 'Comoros', 'Saint Kitts and Nevis', 'North Korea', 'South Korea', 'Kosovo', 'Kuwait', 'Cayman Islands', 'Kazakhstan', 'Laos', 'Lebanon', 'Saint Lucia', 'Liechtenstein', 'Sri Lanka', 'Liberia', 'Lesotho', 'Lithuania', 'Luxembourg', 'Latvia', 'Libya', 'Morocco', 'Monaco', 'Moldova', 'Montenegro', 'Saint Martin', 'Madagascar', 'Marshall Islands', 'Macedonia', 'Mali', 'Myanmar', 'Mongolia', 'Macao', 'Northern Mariana Islands', 'Martinique', 'Mauritania', 'Montserrat', 'Malta', 'Mauritius', 'Maldives', 'Malawi', 'Mexico', 'Malaysia', 'Mozambique', 'Namibia', 'New Caledonia', 'Niger', 'Norfolk Island', 'Nigeria', 'Nicaragua', 'Netherlands', 'Norway', 'Nepal', 'Nauru', 'Niue', 'New Zealand', 'Oman', 'Panama', 'Peru', 'French Polynesia', 'Papua New Guinea', 'Philippines', 'Pakistan', 'Poland', 'Saint Pierre and Miquelon', 'Pitcairn', 'Puerto Rico', 'Palestinian Territory', 'Portugal', 'Palau', 'Paraguay', 'Qatar', 'Reunion', 'Romania', 'Serbia', 'Russia', 'Rwanda', 'Saudi Arabia', 'Solomon Islands', 'Seychelles', 'Sudan', 'South Sudan', 'Sweden', 'Singapore', 'Saint Helena', 'Slovenia', 'Svalbard and Jan Mayen', 'Slovakia', 'Sierra Leone', 'San Marino', 'Senegal', 'Somalia', 'Suriname', 'Sao Tome and Principe', 'El Salvador', 'Sint Maarten', 'Syria', 'Swaziland', 'Turks and Caicos Islands', 'Chad', 'French Southern Territories', 'Togo', 'Thailand', 'Tajikistan', 'Tokelau', 'East Timor', 'Turkmenistan', 'Tunisia', 'Tonga', 'Turkey', 'Trinidad and Tobago', 'Tuvalu', 'Taiwan', 'Tanzania', 'Ukraine', 'Uganda', 'United States Minor Outlying Islands', 'United States', 'Uruguay', 'Uzbekistan', 'Vatican', 'Saint Vincent and the Grenadines', 'Venezuela', 'British Virgin Islands', 'U.S. Virgin Islands', 'Vietnam', 'Vanuatu', 'Wallis and Futuna', 'Samoa', 'Yemen', 'Mayotte', 'South Africa', 'Zambia', 'Zimbabwe'"
+  columns:
+    - name: iso
+      type: iso
+      nullable: false
+      default: DE
+      primary_key: true
+    - name: iso3
+      type: char(3)
+      nullable: false
+      default: DEU
+      modifiers: unique
+    - name: iso_numeric
+      type: smallint
+      nullable: false
+      default: 276
+      modifiers: unique
+    - name: name
+      type: varchar(256)
+      nullable: false
+      default: Germany
+    - name: capital
+      type: varchar(256)
+      nullable: false
+      default: Berlin
+    - name: population
+      type: integer
+      nullable: false
+      default: 81802257
+      check: population BETWEEN 0 AND 2000000000
+    - name: currency_code
+      type: char(3)
+      nullable: false
+      default: EUR
+    - name: currency_name
+      type: varchar(50)
+      nullable: false
+      default: EURO
+    - name: neighbours
+      type: iso[]
+      default: "{CH,PL,NL,DK,BE,CZ,LU,FR,AT}"
+  api:
+    exclude: iso3,iso_numeric,capital,population,neighbours,created_at,updated_at
+  rls:
+    read: all
+    alter: none
+  
+
+City:
+  domains:
+    - name: latitude
+      type: double precision
+      check: value BETWEEN -90.000000 AND 90.000000
+    - name: longitude
+      type: double precision
+      check: value BETWEEN -180.000000 AND 180.000000 
+  columns:
+    - name: id
+      type: bigserial
+      nullable: false
+      primary_key: true 
+    - name: geoname_id
+      type: integer
+      nullable: false
+      default: 2950159
+    - name: name
+      type: varchar(256)
+      nullable: false
+      default: Berlin
+    - name: ascii_name
+      type: varchar(256)
+      default: Berlin
+    - name: alternate_names
+      type: varchar(4096)
+      default: BER,Beirlin,Beirlín,Berleno,Berlien,Berliin,Berliini,Berlijn,Berlim,Berlin,Berline,Berlini,Berlino,Berlyn,Berlynas,Berlëno,Berlín,Berlîn,Berlīne,Berolino,Berolinum,Birlinu,Bèrlîn,Estat de Berlin,Estat de Berlín,bai lin,barlina,beleullin,berlini,berurin,bexrlin,brlyn,perlin,Βερολίνο,Берлин,Берлін,Бэрлін,Բերլին,בערלין,ברלין,برلين,برلین,بېرلىن,ܒܪܠܝܢ,बर्लिन,বার্লিন,பெர்லின்,เบอร์ลิน,ბერლინი,ベルリン,柏林,베를린
+    - name: latitude
+      type: latitude
+      nullable: false
+      default: 52.52437
+    - name: longitude
+      type: longitude
+      nullable: false
+      default: 13.41053
+    - name: population
+      type: integer
+      nullable: false
+      default: 3426354
+    - name: timezone
+      type: varchar(128)
+      nullable: false
+      default: Europe/Berlin
+    - name: geoname_modification_date
+      type: date
+      nullable: false
+      default: "2016-09-26"
+  foreign_keys:
+    - name: country_iso
+      type: iso
+      nullable: false
+      default: DE
+      references:
+        table: country
+        column: iso
+  api:
+    exclude: geoname_id,population,geoname_modification_date,created_at,updated_at
+  rls:
+    read: all
+    alter: none
+
+UserLocation:
+  columns:
+    - name: id
+      type: bigserial
+      primary_key: true
+    - name: latitude
+      type: double precision
+      check: latitude >= -90.000000 AND latitude <= 90.000000
+    - name: longitude
+      type: double precision
+      check: longitude >= -180.000000 AND longitude <= 180.000000
+  foreign_keys:
+    - name: owner_id
+      type: bigint
+      nullable: false
+      references:
+        table: user
+        column: id
+  api:
+    exclude: owner_id,created_at,updated_at
+  rls:
+    read: self
+    alter: none
+  
+
+Profile:
+  enums:
+    - name: attitude
+      options: totally into it,laughing about it,weirded out by it,dont care whatsoever about it,actively ignoring it,somewhat bothered by it,questioning it,at peace with it,rather disturbed by it,it is mostly a culture thing,preachy about it
+    - name: body_type
+      options: rather not say,thin,average,a little extra,curvy,fit,jacked,used up,full figured
+    - name: culture
+      options: none,some,lots
+    - name: desire
+      options: unsure,yes,no,maybe later
+    - name: diet
+      options: omnivore,vegetarian,pescatarian,vegan,carnivore,halal,kosher,paleo,keto,gluten free,pizza
+    - name: educational_modifier
+      options: graduated from,working on,actively avoiding,dropped out of
+    - name: educational_stage
+      options: high school,professional college,university,post grad,space camp,monster university,university of life
+    - name: frequency
+      options: rarely,often,sometimes,never,socially,on special occasions
+    - name: gender_type
+      options: masculine,feminine,both,other
+    - name: gender
+      options: man,woman,cis man,cis woman,agender,androgynous,bigender,genderfluid,genderqueer,gender nonconforming,hijra,intersex,non binary,pangender,transfeminine,transgender,transmasculine,transsexual,trans man,trans woman,two spirits,attack helicopter,other
+    - name: looking_for
+      options: activity partner,friendship,non-monogamous dating,short-term dating,long-term dating,casual fun
+    - name: orientation
+      options: straight,gay,bisexual,asexual,demisexual,heteroflexible,homoflexible,lesbian,pansexual,queer,questioning,sapiosexual
+    - name: relationship_status
+      options: single,seeing someone,married,open relationship,non-monogamous,it is complicated
+    - name: spoken_language
+      options: english,afrikaans,albanian,arabic,armenian,basque,belarusian,bengali,breton,bulgarian,catalan,cebuano,chechen,chinese,chinese (cantonese),chinese (mandarin),c++,croatian,czech,danish,dutch,esperanto,estonian,finnish,french,frisian,georgian,german,greek,gujarati,ancient greek,hawaiian,hebrew,hindi,hungarian,icelandic,ilongo,indonesian,irish,italian,japanese,khmer,korean,latin,latvian,lisp,lithuanian,malay,maori,mongolian,norwegian,occitan,persian,polish,portuguese,punjabi,python,romanian,rotuman,russian,sanskrit,sardinian,serbian,sign language,slovak,slovenian,spanish,swahili,swedish,tagalog,tamil,thai,tibetan,turkish,ukrainian,urdu,vietnamese,welsh,yiddish,other
+    - name: zodiac
+      options: aquarius,aries,cancer,capricorn,gemini,leo,libra,pisces,saggitarius,scorpio,taurus,virgo,hell no
+  columns:
+    - name: id
+      type: bigserial
+      primary_key: true
+    - name: name
+      type: varchar(24)
+      nullable: false
+      check: length(name)>2
+    - name: self_summary
+      type: varchar(1024)
+    - name: gender
+      type: gender[5]
+      nullable: false
+    - name: gender_type
+      type: gender_type
+    - name: relationship_status
+      type: relationship_status
+      nullable: false
+      default: single
+    - name: speaks
+      type: spoken_language[10]
+      nullable: false
+      default: "{english}"
+    - name: dob
+      type: date
+      nullable: false
+      check: dob BETWEEN '1905-01-01'::date  AND CURRENT_DATE - interval '18 year'
+    - name: display_picture
+      type: varchar(1024)
+      nullable: false
+    - name: album
+      type: uuid
+    - name: educational_stage
+      type: educational_stage
+    - name: educational_modifier
+      type: educational_modifier
+    - name: is_student
+      type: boolean
+    - name: diet
+      type: diet
+    - name: body_type
+      type: body_type
+    - name: smokes
+      type: frequency
+    - name: drinks
+      type: frequency
+    - name: uses_drugs
+      type: frequency
+    - name: zodiac
+      type: zodiac
+    - name: zodiac_attitude
+      type: attitude
+    - name: children
+      type: boolean
+    - name: wants_children
+      type: desire
+    - name: has_dog
+      type: boolean
+    - name: has_cat
+      type: boolean
+    - name: height_in_cm
+      type: integer
+      check: 75 >= height_in_cm AND height_in_cm <= 250
+    - name: what_do_I_do
+      type: varchar(1024)
+    - name: i_am_good_at
+      type: varchar(1024)
+    - name: people_first_notice
+      type: varchar(1024)
+    - name: fave_books
+      type: varchar(1024)
+    - name: fave_movies
+      type: varchar(1024)
+    - name: fave_shows
+      type: varchar(1024)
+    - name: fave_music
+      type: varchar(1024)
+    - name: fave_food
+      type: varchar(1024)
+    - name: fave_blogs
+      type: varchar(1024)
+    - name: fave_comics
+      type: varchar(1024)
+    - name: fave_research_papers
+      type: varchar(1024)
+    - name: what_do_I_think_about
+      type: varchar(1024)
+    - name: ideal_use_of_freetime
+      type: varchar(1024)
+    - name: things_cant_do_without
+      type: varchar(1024)
+    - name: most_private_shareables
+      type: varchar(1024)
+    - name: message_me_if
+      type: varchar(1024)
+    - name: orientation
+      type: orientation[5] 
+      default: "{straight}"
+      nullable: false
+    - name: show_me_to_non_straight_only
+      type: boolean 
+      default: false
+      nullable: false
+    - name: search_intention
+      type: looking_for[6]
+      nullable: false
+    - name: search_radius_in_km
+      type: smallint
+      nullable: false
+      check: 3 >= search_radius_in_km AND search_radius_in_km <= 500
+      default: 25
+    - name: search_age_range_lowest
+      type: smallint 
+      default: 18
+      nullable: false
+      check: 18 >= search_age_range_lowest AND search_age_range_lowest <= 120
+    - name: search_age_range_highest
+      type: smallint 
+      default: 120
+      nullable: false
+      check: 18 >= search_age_range_highest AND search_age_range_highest <= 120
+    - name: search_genders
+      type: gender_type[4]
+      nullable: false
+    - name: search_single_only
+      type: boolean 
+      default: false
+      nullable: false
+    - name: search_only_non_monogamous
+      type: boolean 
+      nullable: false
+      default: false
+  foreign_keys:
+    - name: owner_id # this is important for rls
+      type: bigint
+      nullable: false
+      default: request.user_id() unique
+      references:
+        table: user
+        column: id
+    - name: country_iso
+      type: iso
+      nullable: false
+      default: DE
+      references:
+        table: country
+        column: iso
+    - name: city_id
+      type: bigint
+      nullable: false
+      references:
+        table: city
+        column: id
+  rls:
+    read: all
+    alter: self
+  rabbitmq:
+    include: id,name,owner_id
+  api:
+    exclude: owner_id,created_at,updated_at # don't expose the owner_id in the api calls
+

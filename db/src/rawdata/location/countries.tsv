@@ -1,0 +1,250 @@
+ad	and	20	Andorra	Andorra la Vella	84000	eur	Euro	{es,fr}
+ae	are	784	United Arab Emirates	Abu Dhabi	4975593	aed	Dirham	{sa,om}
+af	afg	4	Afghanistan	Kabul	29121286	afn	Afghani	{tm,cn,ir,tj,pk,uz}
+ag	atg	28	Antigua and Barbuda	'St. John''s'	86754	xcd	Dollar	NULL
+ai	aia	660	Anguilla	The Valley	13254	xcd	Dollar	NULL
+al	alb	8	Albania	Tirana	2986952	all	Lek	{mk,gr,me,rs,xk}
+am	arm	51	Armenia	Yerevan	2968000	amd	Dram	{ge,ir,az,tr}
+ao	ago	24	Angola	Luanda	13068161	aoa	Kwanza	{cd,na,zm,cg}
+aq	ata	10	Antarctica	N-A	0	N-A	N-A	NULL
+ar	arg	32	Argentina	Buenos Aires	41343201	ars	Peso	{cl,bo,uy,py,br}
+as	asm	16	American Samoa	Pago Pago	57881	usd	Dollar	NULL
+at	aut	40	Austria	Vienna	8205000	eur	Euro	{ch,de,hu,sk,cz,it,si,li}
+au	aus	36	Australia	Canberra	21515754	aud	Dollar	NULL
+aw	abw	533	Aruba	Oranjestad	71566	awg	Guilder	NULL
+ax	ala	248	Aland Islands	Mariehamn	26711	eur	Euro	NULL
+az	aze	31	Azerbaijan	Baku	8303512	azn	Manat	{ge,ir,am,tr,ru}
+ba	bih	70	Bosnia and Herzegovina	Sarajevo	4590000	bam	Marka	{hr,me,rs}
+bb	brb	52	Barbados	Bridgetown	285653	bbd	Dollar	NULL
+bd	bgd	50	Bangladesh	Dhaka	156118464	bdt	Taka	{mm,in}
+be	bel	56	Belgium	Brussels	10403000	eur	Euro	{de,nl,lu,fr}
+bf	bfa	854	Burkina Faso	Ouagadougou	16241811	xof	Franc	{ne,bj,gh,ci,tg,ml}
+bg	bgr	100	Bulgaria	Sofia	7148785	bgn	Lev	{mk,gr,ro,tr,rs}
+bh	bhr	48	Bahrain	Manama	738004	bhd	Dinar	NULL
+bi	bdi	108	Burundi	Bujumbura	9863117	bif	Franc	{tz,cd,rw}
+bj	ben	204	Benin	Porto-Novo	9056010	xof	Franc	{ne,tg,bf,ng}
+bl	blm	652	Saint Barthelemy	Gustavia	8450	eur	Euro	NULL
+bm	bmu	60	Bermuda	Hamilton	65365	bmd	Dollar	NULL
+bn	brn	96	Brunei	Bandar Seri Begawan	395027	bnd	Dollar	{my}
+bo	bol	68	Bolivia	Sucre	9947418	bob	Boliviano	{pe,cl,py,br,ar}
+bq	bes	535	Bonaire, Saint Eustatius and Saba	N-A	18012	usd	Dollar	NULL
+br	bra	76	Brazil	Brasilia	201103330	brl	Real	{sr,pe,bo,uy,gy,py,gf,ve,co,ar}
+bs	bhs	44	Bahamas	Nassau	301790	bsd	Dollar	NULL
+bt	btn	64	Bhutan	Thimphu	699847	btn	Ngultrum	{cn,in}
+bv	bvt	74	Bouvet Island	N-A	0	nok	Krone	NULL
+bw	bwa	72	Botswana	Gaborone	2029307	bwp	Pula	{zw,za,na}
+by	blr	112	Belarus	Minsk	9685000	byr	Ruble	{pl,lt,ua,ru,lv}
+bz	blz	84	Belize	Belmopan	314522	bzd	Dollar	{gt,mx}
+ca	can	124	Canada	Ottawa	33679000	cad	Dollar	{us}
+cc	cck	166	Cocos Islands	West Island	628	aud	Dollar	NULL
+cd	cod	180	Democratic Republic of the Congo	Kinshasa	70916439	cdf	Franc	{tz,cf,ss,rw,zm,bi,ug,cg,ao}
+cf	caf	140	Central African Republic	Bangui	4844927	xaf	Franc	{td,sd,cd,ss,cm,cg}
+cg	cog	178	Republic of the Congo	Brazzaville	3039126	xaf	Franc	{cf,ga,cd,cm,ao}
+ch	che	756	Switzerland	Bern	7581000	chf	Franc	{de,it,li,fr,at}
+ci	civ	384	Ivory Coast	Yamoussoukro	21058798	xof	Franc	{lr,gh,gn,bf,ml}
+ck	cok	184	Cook Islands	Avarua	21388	nzd	Dollar	NULL
+cl	chl	152	Chile	Santiago	16746491	clp	Peso	{pe,bo,ar}
+cm	cmr	120	Cameroon	Yaounde	19294149	xaf	Franc	{td,cf,ga,gq,cg,ng}
+cn	chn	156	China	Beijing	1330044000	cny	Yuan Renminbi	{la,bt,tj,kz,mn,af,np,mm,kg,pk,kp,ru,vn,in}
+co	col	170	Colombia	Bogota	47790000	cop	Peso	{ec,pe,pa,br,ve}
+cr	cri	188	Costa Rica	San Jose	4516220	crc	Colon	{pa,ni}
+cu	cub	192	Cuba	Havana	11423000	cup	Peso	{us}
+cv	cpv	132	Cape Verde	Praia	508659	cve	Escudo	NULL
+cw	cuw	531	Curacao	 Willemstad	141766	ang	Guilder	NULL
+cx	cxr	162	Christmas Island	Flying Fish Cove	1500	aud	Dollar	NULL
+cy	cyp	196	Cyprus	Nicosia	1102677	eur	Euro	NULL
+cz	cze	203	Czechia	Prague	10476000	czk	Koruna	{pl,de,sk,at}
+de	deu	276	Germany	Berlin	81802257	eur	Euro	{ch,pl,nl,dk,be,cz,lu,fr,at}
+dj	dji	262	Djibouti	Djibouti	740528	djf	Franc	{er,et,so}
+dk	dnk	208	Denmark	Copenhagen	5484000	dkk	Krone	{de}
+dm	dma	212	Dominica	Roseau	72813	xcd	Dollar	NULL
+do	dom	214	Dominican Republic	Santo Domingo	9823821	dop	Peso	{ht}
+dz	dza	12	Algeria	Algiers	34586184	dzd	Dinar	{ne,eh,ly,mr,tn,ma,ml}
+ec	ecu	218	Ecuador	Quito	14790608	usd	Dollar	{pe,co}
+ee	est	233	Estonia	Tallinn	1291170	eur	Euro	{ru,lv}
+eg	egy	818	Egypt	Cairo	80471869	egp	Pound	{ly,sd,il,ps}
+eh	esh	732	Western Sahara	El-Aaiun	273008	mad	Dirham	{dz,mr,ma}
+er	eri	232	Eritrea	Asmara	5792984	ern	Nakfa	{et,sd,dj}
+es	esp	724	Spain	Madrid	46505963	eur	Euro	{ad,pt,gi,fr,ma}
+et	eth	231	Ethiopia	Addis Ababa	88013491	etb	Birr	{er,ke,sd,ss,so,dj}
+fi	fin	246	Finland	Helsinki	5244000	eur	Euro	{no,ru,se}
+fj	fji	242	Fiji	Suva	875983	fjd	Dollar	NULL
+fk	flk	238	Falkland Islands	Stanley	2638	fkp	Pound	NULL
+fm	fsm	583	Micronesia	Palikir	107708	usd	Dollar	NULL
+fo	fro	234	Faroe Islands	Torshavn	48228	dkk	Krone	NULL
+fr	fra	250	France	Paris	64768389	eur	Euro	{ch,de,be,lu,it,ad,mc,es}
+ga	gab	266	Gabon	Libreville	1545255	xaf	Franc	{cm,gq,cg}
+gb	gbr	826	United Kingdom	London	62348447	gbp	Pound	{ie}
+gd	grd	308	Grenada	'St. George''s'	107818	xcd	Dollar	NULL
+ge	geo	268	Georgia	Tbilisi	4630000	gel	Lari	{am,az,tr,ru}
+gf	guf	254	French Guiana	Cayenne	195506	eur	Euro	{sr,br}
+gg	ggy	831	Guernsey	St Peter Port	65228	gbp	Pound	NULL
+gh	gha	288	Ghana	Accra	24339838	ghs	Cedi	{ci,tg,bf}
+gi	gib	292	Gibraltar	Gibraltar	27884	gip	Pound	{es}
+gl	grl	304	Greenland	Nuuk	56375	dkk	Krone	NULL
+gm	gmb	270	Gambia	Banjul	1593256	gmd	Dalasi	{sn}
+gn	gin	324	Guinea	Conakry	10324025	gnf	Franc	{lr,sn,sl,ci,gw,ml}
+gp	glp	312	Guadeloupe	Basse-Terre	443000	eur	Euro	NULL
+gq	gnq	226	Equatorial Guinea	Malabo	1014999	xaf	Franc	{ga,cm}
+gr	grc	300	Greece	Athens	11000000	eur	Euro	{al,mk,tr,bg}
+gs	sgs	239	South Georgia and the South Sandwich Islands	Grytviken	30	gbp	Pound	NULL
+gt	gtm	320	Guatemala	Guatemala City	13550440	gtq	Quetzal	{mx,hn,bz,sv}
+gu	gum	316	Guam	Hagatna	159358	usd	Dollar	NULL
+gw	gnb	624	Guinea-Bissau	Bissau	1565126	xof	Franc	{sn,gn}
+gy	guy	328	Guyana	Georgetown	748486	gyd	Dollar	{sr,br,ve}
+hk	hkg	344	Hong Kong	Hong Kong	6898686	hkd	Dollar	NULL
+hm	hmd	334	Heard Island and McDonald Islands	N-A	0	aud	Dollar	NULL
+hn	hnd	340	Honduras	Tegucigalpa	7989415	hnl	Lempira	{gt,ni,sv}
+hr	hrv	191	Croatia	Zagreb	4284889	hrk	Kuna	{hu,si,ba,me,rs}
+ht	hti	332	Haiti	Port-au-Prince	9648924	htg	Gourde	{do}
+hu	hun	348	Hungary	Budapest	9982000	huf	Forint	{sk,si,ro,ua,hr,at,rs}
+id	idn	360	Indonesia	Jakarta	242968342	idr	Rupiah	{pg,tl,my}
+ie	irl	372	Ireland	Dublin	4622917	eur	Euro	{gb}
+il	isr	376	Israel	Jerusalem	7353985	ils	Shekel	{sy,jo,lb,eg,ps}
+im	imn	833	Isle of Man	Douglas	75049	gbp	Pound	NULL
+in	ind	356	India	New Delhi	1173108018	inr	Rupee	{cn,np,mm,bt,pk,bd}
+io	iot	86	British Indian Ocean Territory	Diego Garcia	4000	usd	Dollar	NULL
+iq	irq	368	Iraq	Baghdad	29671605	iqd	Dinar	{sy,sa,ir,jo,tr,kw}
+ir	irn	364	Iran	Tehran	76923300	irr	Rial	{tm,af,iq,am,pk,az,tr}
+is	isl	352	Iceland	Reykjavik	308910	isk	Krona	NULL
+it	ita	380	Italy	Rome	60340328	eur	Euro	{ch,va,si,sm,fr,at}
+je	jey	832	Jersey	Saint Helier	90812	gbp	Pound	NULL
+jm	jam	388	Jamaica	Kingston	2847232	jmd	Dollar	NULL
+jo	jor	400	Jordan	Amman	6407085	jod	Dinar	{sy,sa,iq,il,ps}
+jp	jpn	392	Japan	Tokyo	127288000	jpy	Yen	NULL
+ke	ken	404	Kenya	Nairobi	40046566	kes	Shilling	{et,tz,ss,so,ug}
+kg	kgz	417	Kyrgyzstan	Bishkek	5776500	kgs	Som	{cn,tj,uz,kz}
+kh	khm	116	Cambodia	Phnom Penh	14453680	khr	Riels	{la,th,vn}
+ki	kir	296	Kiribati	Tarawa	92533	aud	Dollar	NULL
+km	com	174	Comoros	Moroni	773407	kmf	Franc	NULL
+kn	kna	659	Saint Kitts and Nevis	Basseterre	51134	xcd	Dollar	NULL
+kp	prk	408	North Korea	Pyongyang	22912177	kpw	Won	{cn,kr,ru}
+kr	kor	410	South Korea	Seoul	48422644	krw	Won	{kp}
+xk	xkx	0	Kosovo	Pristina	1800000	eur	Euro	{rs,al,mk,me}
+kw	kwt	414	Kuwait	Kuwait City	2789132	kwd	Dinar	{sa,iq}
+ky	cym	136	Cayman Islands	George Town	44270	kyd	Dollar	NULL
+kz	kaz	398	Kazakhstan	Astana	15340000	kzt	Tenge	{tm,cn,kg,uz,ru}
+la	lao	418	Laos	Vientiane	6368162	lak	Kip	{cn,mm,kh,th,vn}
+lb	lbn	422	Lebanon	Beirut	4125247	lbp	Pound	{sy,il}
+lc	lca	662	Saint Lucia	Castries	160922	xcd	Dollar	NULL
+li	lie	438	Liechtenstein	Vaduz	35000	chf	Franc	{ch,at}
+lk	lka	144	Sri Lanka	Colombo	21513990	lkr	Rupee	NULL
+lr	lbr	430	Liberia	Monrovia	3685076	lrd	Dollar	{sl,ci,gn}
+ls	lso	426	Lesotho	Maseru	1919552	lsl	Loti	{za}
+lt	ltu	440	Lithuania	Vilnius	2944459	eur	Euro	{pl,by,ru,lv}
+lu	lux	442	Luxembourg	Luxembourg	497538	eur	Euro	{de,be,fr}
+lv	lva	428	Latvia	Riga	2217969	eur	Euro	{lt,ee,by,ru}
+ly	lby	434	Libya	Tripoli	6461454	lyd	Dinar	{td,ne,dz,sd,tn,eg}
+ma	mar	504	Morocco	Rabat	33848242	mad	Dirham	{dz,eh,es}
+mc	mco	492	Monaco	Monaco	32965	eur	Euro	{fr}
+md	mda	498	Moldova	Chisinau	4324000	mdl	Leu	{ro,ua}
+me	mne	499	Montenegro	Podgorica	666730	eur	Euro	{al,hr,ba,rs,xk}
+mf	maf	663	Saint Martin	Marigot	35925	eur	Euro	{sx}
+mg	mdg	450	Madagascar	Antananarivo	21281844	mga	Ariary	NULL
+mh	mhl	584	Marshall Islands	Majuro	65859	usd	Dollar	NULL
+mk	mkd	807	Macedonia	Skopje	2062294	mkd	Denar	{al,gr,bg,rs,xk}
+ml	mli	466	Mali	Bamako	13796354	xof	Franc	{sn,ne,dz,ci,gn,mr,bf}
+mm	mmr	104	Myanmar	Nay Pyi Taw	53414374	mmk	Kyat	{cn,la,th,bd,in}
+mn	mng	496	Mongolia	Ulan Bator	3086918	mnt	Tugrik	{cn,ru}
+mo	mac	446	Macao	Macao	449198	mop	Pataca	NULL
+mp	mnp	580	Northern Mariana Islands	Saipan	53883	usd	Dollar	NULL
+mq	mtq	474	Martinique	Fort-de-France	432900	eur	Euro	NULL
+mr	mrt	478	Mauritania	Nouakchott	3205060	mro	Ouguiya	{sn,dz,eh,ml}
+ms	msr	500	Montserrat	Plymouth	9341	xcd	Dollar	NULL
+mt	mlt	470	Malta	Valletta	403000	eur	Euro	NULL
+mu	mus	480	Mauritius	Port Louis	1294104	mur	Rupee	NULL
+mv	mdv	462	Maldives	Male	395650	mvr	Rufiyaa	NULL
+mw	mwi	454	Malawi	Lilongwe	15447500	mwk	Kwacha	{tz,mz,zm}
+mx	mex	484	Mexico	Mexico City	112468855	mxn	Peso	{gt,us,bz}
+my	mys	458	Malaysia	Kuala Lumpur	28274729	myr	Ringgit	{bn,th,id}
+mz	moz	508	Mozambique	Maputo	22061451	mzn	Metical	{zw,tz,sz,za,zm,mw}
+na	nam	516	Namibia	Windhoek	2128471	nad	Dollar	{za,bw,zm,ao}
+nc	ncl	540	New Caledonia	Noumea	216494	xpf	Franc	NULL
+ne	ner	562	Niger	Niamey	15878271	xof	Franc	{td,bj,dz,ly,bf,ng,ml}
+nf	nfk	574	Norfolk Island	Kingston	1828	aud	Dollar	NULL
+ng	nga	566	Nigeria	Abuja	154000000	ngn	Naira	{td,ne,bj,cm}
+ni	nic	558	Nicaragua	Managua	5995928	nio	Cordoba	{cr,hn}
+nl	nld	528	Netherlands	Amsterdam	16645000	eur	Euro	{de,be}
+no	nor	578	Norway	Oslo	5009150	nok	Krone	{fi,ru,se}
+np	npl	524	Nepal	Kathmandu	28951852	npr	Rupee	{cn,in}
+nr	nru	520	Nauru	Yaren	10065	aud	Dollar	NULL
+nu	niu	570	Niue	Alofi	2166	nzd	Dollar	NULL
+nz	nzl	554	New Zealand	Wellington	4252277	nzd	Dollar	NULL
+om	omn	512	Oman	Muscat	2967717	omr	Rial	{sa,ye,ae}
+pa	pan	591	Panama	Panama City	3410676	pab	Balboa	{cr,co}
+pe	per	604	Peru	Lima	29907003	pen	Sol	{ec,cl,bo,br,co}
+pf	pyf	258	French Polynesia	Papeete	270485	xpf	Franc	NULL
+pg	png	598	Papua New Guinea	Port Moresby	6064515	pgk	Kina	{id}
+ph	phl	608	Philippines	Manila	99900177	php	Peso	NULL
+pk	pak	586	Pakistan	Islamabad	184404791	pkr	Rupee	{cn,af,ir,in}
+pl	pol	616	Poland	Warsaw	38500000	pln	Zloty	{de,lt,sk,cz,by,ua,ru}
+pm	spm	666	Saint Pierre and Miquelon	Saint-Pierre	7012	eur	Euro	NULL
+pn	pcn	612	Pitcairn	Adamstown	46	nzd	Dollar	NULL
+pr	pri	630	Puerto Rico	San Juan	3916632	usd	Dollar	NULL
+ps	pse	275	Palestinian Territory	East Jerusalem	3800000	ils	Shekel	{jo,il,eg}
+pt	prt	620	Portugal	Lisbon	10676000	eur	Euro	{es}
+pw	plw	585	Palau	Melekeok	19907	usd	Dollar	NULL
+py	pry	600	Paraguay	Asuncion	6375830	pyg	Guarani	{bo,br,ar}
+qa	qat	634	Qatar	Doha	840926	qar	Rial	{sa}
+re	reu	638	Reunion	Saint-Denis	776948	eur	Euro	NULL
+ro	rou	642	Romania	Bucharest	21959278	ron	Leu	{md,hu,ua,bg,rs}
+rs	srb	688	Serbia	Belgrade	7344847	rsd	Dinar	{al,hu,mk,ro,hr,ba,bg,me,xk}
+ru	rus	643	Russia	Moscow	140702000	rub	Ruble	{ge,cn,by,ua,kz,lv,pl,ee,lt,fi,mn,no,az,kp}
+rw	rwa	646	Rwanda	Kigali	11055976	rwf	Franc	{tz,cd,bi,ug}
+sa	sau	682	Saudi Arabia	Riyadh	25731776	sar	Rial	{qa,om,iq,ye,jo,ae,kw}
+sb	slb	90	Solomon Islands	Honiara	559198	sbd	Dollar	NULL
+sc	syc	690	Seychelles	Victoria	88340	scr	Rupee	NULL
+sd	sdn	729	Sudan	Khartoum	35000000	sdg	Pound	{ss,td,eg,et,er,ly,cf}
+ss	ssd	728	South Sudan	Juba	8260490	ssp	Pound	{cd,cf,et,ke,sd,ug}
+se	swe	752	Sweden	Stockholm	9828655	sek	Krona	{no,fi}
+sg	sgp	702	Singapore	Singapore	4701069	sgd	Dollar	NULL
+sh	shn	654	Saint Helena	Jamestown	7460	shp	Pound	NULL
+si	svn	705	Slovenia	Ljubljana	2007000	eur	Euro	{hu,it,hr,at}
+sj	sjm	744	Svalbard and Jan Mayen	Longyearbyen	2550	nok	Krone	NULL
+sk	svk	703	Slovakia	Bratislava	5455000	eur	Euro	{pl,hu,cz,ua,at}
+sl	sle	694	Sierra Leone	Freetown	5245695	sll	Leone	{lr,gn}
+sm	smr	674	San Marino	San Marino	31477	eur	Euro	{it}
+sn	sen	686	Senegal	Dakar	12323252	xof	Franc	{gn,mr,gw,gm,ml}
+so	som	706	Somalia	Mogadishu	10112453	sos	Shilling	{et,ke,dj}
+sr	sur	740	Suriname	Paramaribo	492829	srd	Dollar	{gy,br,gf}
+st	stp	678	Sao Tome and Principe	Sao Tome	175808	std	Dobra	NULL
+sv	slv	222	El Salvador	San Salvador	6052064	usd	Dollar	{gt,hn}
+sx	sxm	534	Sint Maarten	Philipsburg	37429	ang	Guilder	{mf}
+sy	syr	760	Syria	Damascus	22198110	syp	Pound	{iq,jo,il,tr,lb}
+sz	swz	748	Swaziland	Mbabane	1354051	szl	Lilangeni	{za,mz}
+tc	tca	796	Turks and Caicos Islands	Cockburn Town	20556	usd	Dollar	NULL
+td	tcd	148	Chad	'N''Djamena'	10543464	xaf	Franc	{ne,ly,cf,sd,cm,ng}
+tf	atf	260	French Southern Territories	Port-aux-Francais	140	eur	Euro  	NULL
+tg	tgo	768	Togo	Lome	6587239	xof	Franc	{bj,gh,bf}
+th	tha	764	Thailand	Bangkok	67089500	thb	Baht	{la,mm,kh,my}
+tj	tjk	762	Tajikistan	Dushanbe	7487489	tjs	Somoni	{cn,af,kg,uz}
+tk	tkl	772	Tokelau	N-A	1466	nzd	Dollar	NULL
+tl	tls	626	East Timor	Dili	1154625	usd	Dollar	{id}
+tm	tkm	795	Turkmenistan	Ashgabat	4940916	tmt	Manat	{af,ir,uz,kz}
+tn	tun	788	Tunisia	Tunis	10589025	tnd	Dinar	{dz,ly}
+to	ton	776	Tonga	'Nuku''alofa'	122580	top	'Pa''anga'	NULL
+tr	tur	792	Turkey	Ankara	77804122	try	Lira	{sy,ge,iq,ir,gr,am,az,bg}
+tt	tto	780	Trinidad and Tobago	Port of Spain	1228691	ttd	Dollar	NULL
+tv	tuv	798	Tuvalu	Funafuti	10472	aud	Dollar	NULL
+tw	twn	158	Taiwan	Taipei	22894384	twd	Dollar	NULL
+tz	tza	834	Tanzania	Dodoma	41892895	tzs	Shilling	{mz,ke,cd,rw,zm,bi,ug,mw}
+ua	ukr	804	Ukraine	Kiev	45415596	uah	Hryvnia	{pl,md,hu,sk,by,ro,ru}
+ug	uga	800	Uganda	Kampala	33398682	ugx	Shilling	{tz,ke,ss,cd,rw}
+um	umi	581	United States Minor Outlying Islands	N-A	0	usd	Dollar 	NULL
+us	usa	840	United States	Washington	310232863	usd	Dollar	{ca,mx,cu}
+uy	ury	858	Uruguay	Montevideo	3477000	uyu	Peso	{br,ar}
+uz	uzb	860	Uzbekistan	Tashkent	27865738	uzs	Som	{tm,af,kg,tj,kz}
+va	vat	336	Vatican	Vatican City	921	eur	Euro	{it}
+vc	vct	670	Saint Vincent and the Grenadines	Kingstown	104217	xcd	Dollar	NULL
+ve	ven	862	Venezuela	Caracas	27223228	vef	Bolivar	{gy,br,co}
+vg	vgb	92	British Virgin Islands	Road Town	21730	usd	Dollar	NULL
+vi	vir	850	U.S. Virgin Islands	Charlotte Amalie	108708	usd	Dollar	NULL
+vn	vnm	704	Vietnam	Hanoi	89571130	vnd	Dong	{cn,la,kh}
+vu	vut	548	Vanuatu	Port Vila	221552	vuv	Vatu	NULL
+wf	wlf	876	Wallis and Futuna	Mata Utu	16025	xpf	Franc	NULL
+ws	wsm	882	Samoa	Apia	192001	wst	Tala	NULL
+ye	yem	887	Yemen	Sanaa	23495361	yer	Rial	{sa,om}
+yt	myt	175	Mayotte	Mamoudzou	159042	eur	Euro	NULL
+za	zaf	710	South Africa	Pretoria	49000000	zar	Rand	{zw,sz,mz,bw,na,ls}
+zm	zmb	894	Zambia	Lusaka	13460305	zmw	Kwacha	{zw,tz,mz,cd,na,mw,ao}
+zw	zwe	716	Zimbabwe	Harare	13061000	zwl	Dollar	{za,mz,bw,zm}
