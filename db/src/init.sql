@@ -47,6 +47,10 @@ select settings.set('auth.default-role', 'webuser');
 \ir authorization/roles.sql
 \ir authorization/privileges.sql
 
+
+\echo # load raw location data
+\ir rawdata/location/load_locations.sql
+
 \echo # Loading sample data
 \ir sample_data/data.sql
 

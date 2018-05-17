@@ -1,3 +1,11 @@
+interface Option {
+  [index: string]: string;
+}
+
 export interface UIOption {
-  options: {string: string};
+  options: Option;
+}
+
+export interface UIOptions {
+  [index: string]: UIOption;
 }

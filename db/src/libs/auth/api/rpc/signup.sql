@@ -1,3 +1,4 @@
+\echo # Creating signup(email, password) function. Modify this if you want to use a different signup.
 create or replace function signup(email text, password text) returns session as $$
 declare
     usr record;
@@ -9,9 +10,9 @@ begin
         ' (email, password) values'
         ' ($1, $2)'
         ' returning row_to_json(u.*) as j'
-		, quote_ident(settings.get('auth.data-schema')))
-   	INTO usr
-   	USING $1, $2;
+        , quote_ident(settings.get('auth.data-schema')))
+    INTO usr
+    USING $1, $2;
 
     EXECUTE format(
         ' select json_populate_record(null::%I."user", $1) as r'

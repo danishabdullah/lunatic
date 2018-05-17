@@ -1,27 +1,26 @@
-
+\echo # Creating login function
 create or replace function login(email text, password text) returns session as $$
 declare
     usr record;
     usr_api record;
     result record;
 begin
-
     EXECUTE format(
-		' select row_to_json(u.*) as j'
+        ' select row_to_json(u.*) as j'
         ' from %I."user" as u'
         ' where u.email = $1 and u.password = crypt($2, u.password)'
-		, quote_ident(settings.get('auth.data-schema')))
-   	INTO usr
-   	USING $1, $2;
+        , quote_ident(settings.get('auth.data-schema')))
+    INTO usr
+    USING $1, $2;
 
     if usr is NULL then
         raise exception 'invalid email/password';
     else
         EXECUTE format(
             ' select json_populate_record(null::%I."user", $1) as r'
-		    , quote_ident(settings.get('auth.api-schema')))
-   	    INTO usr_api
-	    USING usr.j;
+            , quote_ident(settings.get('auth.api-schema')))
+        INTO usr_api
+        USING usr.j;
 
         result = (
             row_to_json(usr_api.r),

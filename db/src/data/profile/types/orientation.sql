@@ -5,23 +5,22 @@ create type orientation as enum (
 
 insert into data.uisetup (name, details)
 values
-    ('orientation', '{"options":{"straight":"Straight","gay":"Gay","bisexual":"Bisexual","asexual":"Asexual","demisexual":"Demisexual","heteroflexible":"Heteroflexible","homoflexible":"Homoflexible","lesbian":"Lesbian","pansexual":"Pansexual","queer":"Queer","questioning":"Questioning","sapiosexual":"Sapiosexual"}}'::jsonb);
+    ('orientation', '{"Asexual":"asexual","Bisexual":"bisexual","Demisexual":"demisexual","Gay":"gay","Heteroflexible":"heteroflexible","Homoflexible":"homoflexible","Lesbian":"lesbian","Pansexual":"pansexual","Queer":"queer","Questioning":"questioning","Sapiosexual":"sapiosexual","Straight":"straight"}'::jsonb)
+    ;
 
+-- prettified json structure is as follows
+--    {
+--        "Asexual": "asexual",
+--        "Bisexual": "bisexual",
+--        "Demisexual": "demisexual",
+--        "Gay": "gay",
+--        "Heteroflexible": "heteroflexible",
+--        "Homoflexible": "homoflexible",
+--        "Lesbian": "lesbian",
+--        "Pansexual": "pansexual",
+--        "Queer": "queer",
+--        "Questioning": "questioning",
+--        "Sapiosexual": "sapiosexual",
+--        "Straight": "straight"
+--    }
 
---
--- {
---     "options": {
---         "straight": "Straight",
---         "gay": "Gay",
---         "bisexual": "Bisexual",
---         "asexual": "Asexual",
---         "demisexual": "Demisexual",
---         "heteroflexible": "Heteroflexible",
---         "homoflexible": "Homoflexible",
---         "lesbian": "Lesbian",
---         "pansexual": "Pansexual",
---         "queer": "Queer",
---         "questioning": "Questioning",
---         "sapiosexual": "Sapiosexual"
---     }
--- }

@@ -1,40 +1,27 @@
 \echo # Creating zodiac type for profile
 create type zodiac as enum (
-    'aquarius', 
-    'aries', 
-    'cancer', 
-    'capricorn', 
-    'gemini', 
-    'leo', 
-    'libra', 
-    'pisces', 
-    'saggitarius', 
-    'scorpio', 
-    'taurus', 
-    'virgo', 
-    'hell no'
+    'aquarius', 'aries', 'cancer', 'capricorn', 'gemini', 'leo', 'libra', 'pisces', 'saggitarius', 'scorpio', 'taurus', 'virgo', 'hell no'
 );
 
 insert into data.uisetup (name, details)
 values
-    ('zodiac', '{"options":{"aquarius":"Aquarius","aries":"Aries","cancer":"Cancer","capricorn":"Capricorn","gemini":"Gemini","leo":"Leo","libra":"Libra","pisces":"Pisces","saggitarius":"Saggitarius","scorpio":"Scorpio","taurus":"Taurus","virgo":"Virgo", "hell no":"Hell No"}}'::jsonb);
+    ('zodiac', '{"Aquarius":"aquarius","Aries":"aries","Cancer":"cancer","Capricorn":"capricorn","Gemini":"gemini","Hell No":"hell no","Leo":"leo","Libra":"libra","Pisces":"pisces","Saggitarius":"saggitarius","Scorpio":"scorpio","Taurus":"taurus","Virgo":"virgo"}'::jsonb)
+    ;
 
+-- prettified json structure is as follows
+--    {
+--        "Aquarius": "aquarius",
+--        "Aries": "aries",
+--        "Cancer": "cancer",
+--        "Capricorn": "capricorn",
+--        "Gemini": "gemini",
+--        "Hell No": "hell no",
+--        "Leo": "leo",
+--        "Libra": "libra",
+--        "Pisces": "pisces",
+--        "Saggitarius": "saggitarius",
+--        "Scorpio": "scorpio",
+--        "Taurus": "taurus",
+--        "Virgo": "virgo"
+--    }
 
---
--- {
---     "options": {
---         "aquarius": "Aquarius",
---         "aries": "Aries",
---         "cancer": "Cancer",
---         "capricorn": "Capricorn",
---         "gemini": "Gemini",
---         "leo": "Leo",
---         "libra": "Libra",
---         "pisces": "Pisces",
---         "saggitarius": "Saggitarius",
---         "scorpio": "Scorpio",
---         "taurus": "Taurus",
---         "virgo": "Virgo",
---         "hell no": "Hell No"
---     }
--- }

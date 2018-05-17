@@ -43,6 +43,7 @@ export interface Profile {
   most_private_shareables: string;
   message_me_if: string;
   orientation: string[];
+  show_me_to_non_straight_only: boolean;
   search_intention: string[];
   search_age_range_lowest: number;
   search_age_range_highest: number;

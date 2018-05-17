@@ -1,4 +1,4 @@
-import {rest_service, jwt, resetdb} from '../common.js';
+import {rest_service, jwt, resetdb} from './common.js';
 const request = require('supertest');
 const should = require("should");
 
@@ -12,6 +12,7 @@ describe('read', function() {
       .expect(200, done)
       .expect( r => {
         r.body.length.should.equal(3);
+        r.body[0].id.should.equal(1);
       })
   });
 
@@ -20,6 +21,7 @@ describe('read', function() {
       .get('/todos/1?select=id,todo')
       .expect(200, done)
       .expect( r => {
+        r.body.id.should.equal(1);
         r.body.todo.should.equal('item_1');
       })
   });

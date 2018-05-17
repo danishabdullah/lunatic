@@ -34,3 +34,4 @@ $$  language plpgsql;;
 
 select _temp_create_application_roles(:'authenticator', enum_range(null::data.user_role)::text[]);
 drop function _temp_create_application_roles(text, text[]);
+

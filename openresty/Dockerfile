@@ -5,7 +5,7 @@
 # docker push $REMOTE_REPO:latest
 
 
-FROM subzerocloud/openresty:latest
+FROM openresty/openresty:jessie
 
 COPY entrypoint.sh /entrypoint.sh
 COPY nginx /usr/local/openresty/nginx

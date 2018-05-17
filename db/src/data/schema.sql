@@ -2,25 +2,58 @@ drop schema if exists data cascade;
 create schema data;
 set search_path = data, public;
 
--- import the type specifying the types of users we have (this is an enum).
--- you most certainly will have to redefine this type for your application
-\ir ../libs/auth/data/user/types/user_role.sql
+create extension moddatetime;
+create extension cube;
+create extension earthdistance;
 
--- import the default table definition for the user model used by the auth lib
--- you can choose to define the "user" table yourself if you need additional columns
+-- Uisetup
+\ir uisetup/types/all.sql
+\ir uisetup/uisetup.sql
+
+
+-- import the type specifying the types of users we have (this is an enum).
+\ir ../libs/auth/data/user/types/all.sql
 \ir ../libs/auth/data/user/user.sql
 
 -- import our application models
 
--- ui setup
-\ir ./ui/setup.sql
-\ir ./relay/uisetup_id.sql
+-- Conversation
+\ir conversation/types/all.sql
+\ir conversation/conversation.sql
 
--- todo
-\ir ./todo/todo.sql
-\ir ./relay/todo_id.sql
 
--- profile
-\ir ./profile/types/all.sql
-\ir ./profile/profile.sql
-\ir ./relay/profile_id.sql
+-- Message
+\ir message/types/all.sql
+\ir message/message.sql
+
+
+-- Match
+\ir match/types/all.sql
+\ir match/match.sql
+
+
+-- Hidden
+\ir hidden/types/all.sql
+\ir hidden/hidden.sql
+
+
+-- Country
+\ir country/types/all.sql
+\ir country/country.sql
+
+
+-- City
+\ir city/types/all.sql
+\ir city/city.sql
+
+
+-- Userlocation
+\ir userlocation/types/all.sql
+\ir userlocation/userlocation.sql
+
+
+-- Profile
+\ir profile/types/all.sql
+\ir profile/profile.sql
+
+

@@ -4,8 +4,8 @@
 \ir culture.sql
 \ir desire.sql
 \ir diet.sql
-\ir educational_stage.sql
 \ir educational_modifier.sql
+\ir educational_stage.sql
 \ir frequency.sql
 \ir gender_type.sql
 \ir gender.sql

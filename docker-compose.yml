@@ -8,7 +8,7 @@ services:
   # use a separate database instance, like Amazon RDS, i.e. in production this section will be
   # commented and in the .env file you will specify the ip of your separate database instance
   db:
-    image: postgres:latest
+    image: postgres:10-alpine
     ports:
       - "5432:5432"
     environment:
@@ -25,7 +25,6 @@ services:
       - DB_ANON_ROLE=${DB_ANON_ROLE}
       - DEVELOPMENT=${DEVELOPMENT}
       - JWT_SECRET=${JWT_SECRET}
-
     volumes:
       - "./db/src:/docker-entrypoint-initdb.d"
   ### DB END
@@ -33,7 +32,7 @@ services:
   # PostgREST instance, is responsible for communicating with the database
   # and providing a REST api, (almost) every request that is sent to the database goes through it
   postgrest:
-    image: subzerocloud/postgrest
+    image: postgrest/postgrest:latest
     ports:
       - "3000:3000"
     links:
@@ -53,13 +52,12 @@ services:
   # After some processing/checks and transformation, the request is forwarded
   # to PostgREST down the stack.
   openresty:
-    image: subzerocloud/openresty
+    image: openresty/openresty:1.13.6.1-2-alpine
     ports:
       - "8080:80"
     links:
       - db:db
       - postgrest:postgrest
-      - rabbitmq:rabbitmq
     entrypoint: /entrypoint.sh
     environment:
       - JWT_SECRET=${JWT_SECRET}
@@ -72,9 +70,6 @@ services:
       - DB_SCHEMA=${DB_SCHEMA}
       - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}
-      - RELAY_ID_COLUMN=${RELAY_ID_COLUMN}
-      - RABBITMQ_HOST=${RABBITMQ_HOST}
-      - RABBITMQ_PORT=${RABBITMQ_PORT}
     volumes:
       - "./openresty/entrypoint.sh:/entrypoint.sh"
       - "./openresty/nginx/conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf"
@@ -85,7 +80,7 @@ services:
   # pg-amqp-bridge instance is responsible for forwarding NOTIFY events in PostgreSQL
   # to RabbitMQ based on the BRIDGE_CHANNELS configuration
   pg_amqp_bridge:
-    image: subzerocloud/pg-amqp-bridge
+    image: subzerocloud/pg-amqp-bridge:latest
     links:
       - db
       - rabbitmq
@@ -98,7 +93,7 @@ services:
   # RabbitMQ instance can be used to consolidate events that originated in your database/application.
   # You can connect here with different consumers and take actions based on those events (like sending signup emails)
   rabbitmq:
-    image: rabbitmq:3-management
+    image: rabbitmq:3-management-alpine
     ports:
       - "5671:5671"
       - "5672:5672"
