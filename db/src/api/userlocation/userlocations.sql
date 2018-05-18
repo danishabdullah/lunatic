@@ -5,8 +5,6 @@ select
     
     id as id,
     latitude,
-    longitude,
-    updated_at,
-    created_at
+    longitude
 from data.userlocation t;
 alter view userlocations owner to api; -- it is important to set the correct owner to the RLS policy kicks in

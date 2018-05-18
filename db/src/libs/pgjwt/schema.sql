@@ -14,7 +14,7 @@
 \set pgjwt_sql `sed -e 's/\\echo Use "CREATE EXTENSION pgjwt" to load this file. \\quit//g' ${JWT_FILE} | sed -e "s/@extschema@/${pgjwt_schema}/g"`
 
 -- create the jwt schema namespace and all the functions in it
-create extension if not exists pgcrypto;
+create extension if not exists pgcrypto schema pg_catalog;
 drop schema if exists :pgjwt_schema cascade;	
 create schema :pgjwt_schema;
 set search_path to pgjwt, public;

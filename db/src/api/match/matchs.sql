@@ -6,8 +6,6 @@ select
     ids_string as ids_string,
     left_liked,
     right_liked,
-    updated_at,
-    created_at,
     left_user_id,
     right_user_id
 from data.match t;

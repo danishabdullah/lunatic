@@ -8,7 +8,9 @@ drop schema if exists auth cascade;
 create schema auth;
 set search_path = auth, public;
 
-create extension if not exists pgcrypto;
+create extension if not exists pgcrypto schema pg_catalog;
+
+select settings.set('auth.data-schema', current_schema);
 
 create or replace function encrypt_pass() returns trigger as $$
 begin

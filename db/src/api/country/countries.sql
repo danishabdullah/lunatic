@@ -6,8 +6,6 @@ select
     iso as iso,
     name,
     currency_code,
-    currency_name,
-    updated_at,
-    created_at
+    currency_name
 from data.country t;
 alter view countries owner to api; -- it is important to set the correct owner to the RLS policy kicks in

@@ -10,8 +10,6 @@ select
     latitude,
     longitude,
     timezone,
-    updated_at,
-    created_at,
     country_iso
 from data.city t;
 alter view cities owner to api; -- it is important to set the correct owner to the RLS policy kicks in

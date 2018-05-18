@@ -13,8 +13,6 @@ select
     marked_as_bot,
     marked_as_fake,
     marked_as_impersonation,
-    updated_at,
-    created_at,
     origin_user_id,
     target_user_id
 from data.conversation t;

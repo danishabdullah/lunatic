@@ -8,7 +8,7 @@ begin
     EXECUTE format(
         ' select row_to_json(u.*) as j'
         ' from %I."user" as u'
-        ' where u.email = $1 and u.password = crypt($2, u.password)'
+        ' where u.email = $1 and u.password = crypt($2, u.password::text)'
         , quote_ident(settings.get('auth.data-schema')))
     INTO usr
     USING $1, $2;

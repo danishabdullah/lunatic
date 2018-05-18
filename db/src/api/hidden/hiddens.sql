@@ -4,8 +4,6 @@ create or replace view hiddens as
 select 
     
     id as id,
-    updated_at,
-    created_at,
     by_user,
     hidden_user
 from data.hidden t;

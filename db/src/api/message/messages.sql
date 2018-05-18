@@ -5,8 +5,6 @@ select
     
     id as id,
     content,
-    updated_at,
-    created_at,
     conversation_id,
     "from",
     "to"
