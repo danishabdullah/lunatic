@@ -317,11 +317,9 @@ UserLocation:
       type: bigserial
       primary_key: true
     - name: latitude
-      type: double precision
-      check: latitude >= -90.000000 AND latitude <= 90.000000
+      type: latitude
     - name: longitude
-      type: double precision
-      check: longitude >= -180.000000 AND longitude <= 180.000000
+      type: longitude
   foreign_keys:
     - name: owner_id
       type: bigint
@@ -333,8 +331,8 @@ UserLocation:
     exclude: owner_id,created_at,updated_at
   rls:
     read: self
-    alter: none
-  
+    alter: self
+
 
 Profile:
   enums:
@@ -498,6 +496,20 @@ Profile:
       nullable: false
     - name: search_only_non_monogamous
       type: boolean 
+      nullable: false
+      default: false
+    - name: search_kinky_only
+      type: boolean
+      default: false
+      nullable: false
+    - name: last_signed_in
+      type: timestampe with time zone
+      default: current_timestamp
+    - name: is_paused
+      type: boolean
+      nullable: false
+      default: false
+    - name: is_kinky
       nullable: false
       default: false
   foreign_keys:

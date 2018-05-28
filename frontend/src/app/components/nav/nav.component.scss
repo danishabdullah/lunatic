@@ -1,0 +1,85 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 3fr 4fr 2fr 1fr 1fr;
+  grid-gap: 5px;
+  justify-items: center;
+  grid-template-areas:
+    "brand blank1 mode blank2 messages profile"
+}
+
+.brand {
+  align-self: center;
+  justify-self: end;
+  grid-area: brand;
+}
+
+.mode {
+  align-self: center;
+  justify-self: center;
+  grid-area: mode;
+}
+
+.blank1{
+  grid-area: blank1;
+}
+.blank2{
+  grid-area: blank2;
+}
+
+.messages{
+  align-self: center;
+  justify-self: end;
+  grid-area: messages;
+}
+
+.profile{
+  align-self: center;
+  justify-self: start;
+  grid-area: profile;
+}
+.mode > .modebar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+  grid-template-areas:
+    "dating friendship hookup events search"
+}
+
+.modebar > .dating {
+  grid-area: dating
+}
+
+.modebar > .friendship {
+  grid-area: friendship
+}
+
+.modebar > .hookup {
+  grid-area: hookup
+}
+
+.modebar > .events {
+  grid-area: events
+}
+
+.modebar > .search {
+  grid-area: search
+}
+
+.modebar {
+  a, a:visited{
+    color: inherit;
+  }
+  a:hover, a:active {
+    color: rgb(228, 150, 163);
+  }
+}

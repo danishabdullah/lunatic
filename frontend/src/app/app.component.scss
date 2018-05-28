@@ -1,0 +1,32 @@
+.site{
+  display: grid;
+  grid-template-areas:
+  "header"
+  "container";
+}
+
+.header{
+  grid-area: header;
+}
+
+.container{
+  grid-area: container;
+  display: grid;
+  grid-template-columns: 3fr 8fr 3fr;
+  grid-gap: 5px;
+  justify-items: center;
+  grid-template-areas:
+    "blank1 content blank2";
+}
+
+.blank1{
+  grid-area: blank1
+}
+
+.blank2{
+  grid-area: blank2
+}
+
+.content{
+  grid-area: content
+}

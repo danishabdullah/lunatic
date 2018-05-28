@@ -32,9 +32,9 @@ grant api to current_user; -- this is a workaround for RDS where the master user
 \ir rpc/messages.sql
 
 -- match
-\ir match/matchs.sql
+\ir match/matches.sql
 
-\ir rpc/matchs.sql
+\ir rpc/matches.sql
 
 -- hidden
 \ir hidden/hiddens.sql

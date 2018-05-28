@@ -1,0 +1,69 @@
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="loginDetailsGroup">
+      <form [formGroup]="loginDetailsGroup" class="signupForm">
+        <ng-template matStepLabel>Login details</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Email" value="someone@example.com" formControlName="email" type="email" required>
+            <mat-error *ngIf="loginDetailsGroup.controls.email.errors?.email && !loginDetailsGroup.controls.email.errors?.required">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="loginDetailsGroup.controls.email.errors?.required">
+              Email is required for you to be able to signin in the future
+            </mat-error>
+            <mat-error *ngIf="loginDetailsGroup.controls.email.errors?.minlength && !loginDetailsGroup.controls.email.errors?.required">
+              That looks too short for an email, are you sure that you haven't mistyped something?
+            </mat-error>
+            <mat-error *ngIf="loginDetailsGroup.controls.email.errors?.maxlength && !loginDetailsGroup.controls.email.errors?.required">
+              That looks too long for an email address, are you sure that you haven't mistyped something?
+            </mat-error>
+          </mat-form-field>
+            <mat-form-field>
+            <input matInput placeholder="Password" value="12345678" formControlName="password" type="password" required>
+            <mat-hint align="end">The password must be between 8 and 72 characters long</mat-hint>
+            <mat-error *ngIf="loginDetailsGroup.controls.password.errors?.minlength && !loginDetailsGroup.controls.password.errors?.required">
+              Password cannot be less than 8 characters long
+            </mat-error>
+            <mat-error *ngIf="loginDetailsGroup.controls.password.errors?.required">
+              Password is required for you to be able to signin in the future
+            </mat-error>
+            <mat-error *ngIf="loginDetailsGroup.controls.password.errors?.maxlength && !loginDetailsGroup.controls.password.errors?.required">
+              Password cannot be more than 72 characters long
+            </mat-error>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext color="primary">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step [stepControl]="introGroup">
+      <form [formGroup]="introGroup"  class="signupForm">
+        <ng-template matStepLabel>Introduction</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Name" value="Janine Müller" formControlName="nameCtrl" required>
+          <mat-hint align="end">Use your name or show your individuality and choose a word combo that's uniquely you!</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Date of birth" [min]="minDate" [max]="maxDate" formControlName="dobCtrl" required disabled>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker touchUi="true" #picker disabled="false"></mat-datepicker>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext color="primary">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+
+</mat-horizontal-stepper>

@@ -13,5 +13,5 @@ with check (
 ---- give access to the view owner
 grant select, insert, update, delete on data.match to api;
 -- give access to user groups
-grant select, insert, update, delete on api.matchs to webuser;
+grant select, insert, update, delete on api.matches to webuser;
 

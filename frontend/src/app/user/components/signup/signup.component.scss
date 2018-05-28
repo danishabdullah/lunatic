@@ -1,0 +1,11 @@
+.signupForm{
+  min-width: 700px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.signupForm > * {
+  width: 100%;
+}

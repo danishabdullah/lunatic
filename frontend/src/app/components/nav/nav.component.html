@@ -1,0 +1,61 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="navbar">
+      <span class="brand">{{ brand }}</span>
+      <span  class="mode">
+        <div class="modebar">
+          <div *ngFor="let choice of modes">
+              <a [routerLink]="['/mode/'+choice.mode]" mat-raised-button class="{{choice.mode}} {{choice.class}}">
+                <!-- {{choice.mode | titlecase}} -->
+                <mat-icon matTooltip="{{choice.mode | titlecase}}">{{choice.icon}}</mat-icon>
+              </a>
+          </div>
+        </div>
+      </span>
+      <div class="messages">
+          <button type="button" md-raised-buttion mat-icon-button href="#"><mat-icon placeholder="Matches">star</mat-icon></button>
+        <button type="button" md-raised-buttion mat-icon-button href="#"><mat-icon placeholder="Messages">message</mat-icon></button>
+      </div>
+      <span class="profile">
+        <button type="button" md-raised-buttion mat-icon-button href="#" class="profile"><mat-icon>face</mat-icon></button>
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Open options">menu</mat-icon>
+        </button>
+      </span>
+    </mat-toolbar>
+  </mat-sidenav-content>
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="isHandset ? 'dialog' : 'navigation'"
+    [mode]="'over'"
+    position="end">
+    <mat-toolbar color="primary">Menu
+
+    <button
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="drawer.toggle()">
+      <mat-icon aria-label="Close options">close</mat-icon>
+    </button>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">A</a>
+      <a mat-list-item href="#">B</a>
+      <a mat-list-item href="#">C</a>
+      <a mat-list-item href="#">D</a>
+      <a mat-list-item href="#">E</a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+</mat-sidenav-container>
